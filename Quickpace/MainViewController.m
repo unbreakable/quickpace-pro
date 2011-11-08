@@ -79,7 +79,7 @@
                                hoursEntry.text, @"hours", 
                                minutesEntry.text, @"minutes", 
                                secondsEntry.text, @"seconds", 
-                               paceDisplayText, @"pace", 
+                               paceDisplayText.text, @"pace", 
                                speedDisplay.text, @"speed", 
                                calorieDisplay.text, @"calories",
                                [userSettings getAgeDefault], @"age",
@@ -89,6 +89,8 @@
                                [userSettings getUnitsDefault], @"units", 
                                nil];
     [FlurryAnalytics logEvent:@"Calculate button tapped" withParameters:flurryDic];
+    
+    NSLog(@"Age is %@", [userSettings getAgeDefault]);
 }
 
 -(void) displayWelcome

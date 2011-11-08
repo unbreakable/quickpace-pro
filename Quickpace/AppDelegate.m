@@ -34,7 +34,7 @@
     // Fire up Flurry (if user permits)
     if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
         [FlurryAnalytics startSession:@"SI3MMAED13G6AARE9FXM"];
-        
+            
     // Pull version number from Info plist and put in Settings so it is visible in the Settings.app
     [userSettings saveVersion:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 }
