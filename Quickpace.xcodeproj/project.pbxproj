@@ -25,6 +25,33 @@
 		81D4DAA61468B72A00BA965E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7F1468B72A00BA965E /* CoreData.framework */; };
 		81D4DAAE1468B72A00BA965E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAAC1468B72A00BA965E /* InfoPlist.strings */; };
 		81D4DAB11468B72A00BA965E /* QuickpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAB01468B72A00BA965E /* QuickpaceTests.m */; };
+		81D4DAC11468BC6500BA965E /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DAC01468BC6500BA965E /* libFlurryAnalytics.a */; };
+		81D4DAD31468BC9300BA965E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC41468BC9300BA965E /* Default.png */; };
+		81D4DAD41468BC9300BA965E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC51468BC9300BA965E /* Default@2x.png */; };
+		81D4DAD51468BC9300BA965E /* FirstTimeSettingsMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */; };
+		81D4DAD61468BC9300BA965E /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC71468BC9300BA965E /* icon-72.png */; };
+		81D4DAD71468BC9300BA965E /* icon-small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC81468BC9300BA965E /* icon-small-50.png */; };
+		81D4DAD81468BC9300BA965E /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC91468BC9300BA965E /* icon-small.png */; };
+		81D4DAD91468BC9300BA965E /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACA1468BC9300BA965E /* icon-small@2x.png */; };
+		81D4DADA1468BC9300BA965E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACB1468BC9300BA965E /* icon.png */; };
+		81D4DADB1468BC9300BA965E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACC1468BC9300BA965E /* icon@2x.png */; };
+		81D4DADC1468BC9300BA965E /* quickpace blue background.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACD1468BC9300BA965E /* quickpace blue background.png */; };
+		81D4DADD1468BC9300BA965E /* quickpace blue result outline etched.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACE1468BC9300BA965E /* quickpace blue result outline etched.png */; };
+		81D4DADE1468BC9300BA965E /* quickpace gold button down.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACF1468BC9300BA965E /* quickpace gold button down.png */; };
+		81D4DADF1468BC9300BA965E /* quickpace gold button up.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAD01468BC9300BA965E /* quickpace gold button up.png */; };
+		81D4DAE01468BC9300BA965E /* SettingsGear.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAD11468BC9300BA965E /* SettingsGear.png */; };
+		81D4DAE11468BC9300BA965E /* SettingsGearGlowing.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAD21468BC9300BA965E /* SettingsGearGlowing.png */; };
+		81D4DAEA1468BFB800BA965E /* EffectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE31468BFB800BA965E /* EffectsManager.m */; };
+		81D4DAEB1468BFB800BA965E /* RunStatsCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE51468BFB800BA965E /* RunStatsCalculator.m */; };
+		81D4DAEC1468BFB800BA965E /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE71468BFB800BA965E /* SettingsManager.m */; };
+		81D4DAED1468BFB800BA965E /* UnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE91468BFB800BA965E /* UnitConverter.m */; };
+		81D4DAEE1468BFD600BA965E /* EffectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE31468BFB800BA965E /* EffectsManager.m */; };
+		81D4DAEF1468BFD600BA965E /* RunStatsCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE51468BFB800BA965E /* RunStatsCalculator.m */; };
+		81D4DAF01468BFD600BA965E /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE71468BFB800BA965E /* SettingsManager.m */; };
+		81D4DAF11468BFD600BA965E /* UnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE91468BFB800BA965E /* UnitConverter.m */; };
+		81D4DAF21468BFD600BA965E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8B1468B72A00BA965E /* AppDelegate.m */; };
+		81D4DAF31468BFD600BA965E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA911468B72A00BA965E /* MainViewController.m */; };
+		81D4DAF41468BFD600BA965E /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA941468B72A00BA965E /* FlipsideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,25 +70,50 @@
 		81D4DA7B1468B72A00BA965E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		81D4DA7F1468B72A00BA965E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		81D4DA831468B72A00BA965E /* Quickpace-Info.plist */ = {isa = PBXFileReference; path = "Quickpace-Info.plist"; sourceTree = "<group>"; };
+		81D4DA831468B72A00BA965E /* Quickpace-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quickpace-Info.plist"; sourceTree = "<group>"; };
 		81D4DA851468B72A00BA965E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81D4DA871468B72A00BA965E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		81D4DA891468B72A00BA965E /* Quickpace-Prefix.pch */ = {isa = PBXFileReference; path = "Quickpace-Prefix.pch"; sourceTree = "<group>"; };
-		81D4DA8A1468B72A00BA965E /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		81D4DA891468B72A00BA965E /* Quickpace-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quickpace-Prefix.pch"; sourceTree = "<group>"; };
+		81D4DA8A1468B72A00BA965E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81D4DA8B1468B72A00BA965E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		81D4DA8E1468B72A00BA965E /* Quickpace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quickpace.xcdatamodel; sourceTree = "<group>"; };
-		81D4DA901468B72A00BA965E /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		81D4DA901468B72A00BA965E /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		81D4DA911468B72A00BA965E /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		81D4DA931468B72A00BA965E /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		81D4DA931468B72A00BA965E /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		81D4DA941468B72A00BA965E /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		81D4DA971468B72A00BA965E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainViewController.xib; sourceTree = "<group>"; };
 		81D4DA9A1468B72A00BA965E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlipsideViewController.xib; sourceTree = "<group>"; };
 		81D4DAA11468B72A00BA965E /* QuickpaceTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickpaceTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D4DAA21468B72A00BA965E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		81D4DAAB1468B72A00BA965E /* QuickpaceTests-Info.plist */ = {isa = PBXFileReference; path = "QuickpaceTests-Info.plist"; sourceTree = "<group>"; };
+		81D4DAAB1468B72A00BA965E /* QuickpaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickpaceTests-Info.plist"; sourceTree = "<group>"; };
 		81D4DAAD1468B72A00BA965E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		81D4DAAF1468B72A00BA965E /* QuickpaceTests.h */ = {isa = PBXFileReference; path = QuickpaceTests.h; sourceTree = "<group>"; };
+		81D4DAAF1468B72A00BA965E /* QuickpaceTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickpaceTests.h; sourceTree = "<group>"; };
 		81D4DAB01468B72A00BA965E /* QuickpaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickpaceTests.m; sourceTree = "<group>"; };
+		81D4DABF1468BC6500BA965E /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
+		81D4DAC01468BC6500BA965E /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
+		81D4DAC41468BC9300BA965E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		81D4DAC51468BC9300BA965E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FirstTimeSettingsMessage.png; sourceTree = "<group>"; };
+		81D4DAC71468BC9300BA965E /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		81D4DAC81468BC9300BA965E /* icon-small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small-50.png"; sourceTree = "<group>"; };
+		81D4DAC91468BC9300BA965E /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
+		81D4DACA1468BC9300BA965E /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
+		81D4DACB1468BC9300BA965E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		81D4DACC1468BC9300BA965E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		81D4DACD1468BC9300BA965E /* quickpace blue background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace blue background.png"; sourceTree = "<group>"; };
+		81D4DACE1468BC9300BA965E /* quickpace blue result outline etched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace blue result outline etched.png"; sourceTree = "<group>"; };
+		81D4DACF1468BC9300BA965E /* quickpace gold button down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace gold button down.png"; sourceTree = "<group>"; };
+		81D4DAD01468BC9300BA965E /* quickpace gold button up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace gold button up.png"; sourceTree = "<group>"; };
+		81D4DAD11468BC9300BA965E /* SettingsGear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsGear.png; sourceTree = "<group>"; };
+		81D4DAD21468BC9300BA965E /* SettingsGearGlowing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsGearGlowing.png; sourceTree = "<group>"; };
+		81D4DAE21468BFB800BA965E /* EffectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsManager.h; sourceTree = "<group>"; };
+		81D4DAE31468BFB800BA965E /* EffectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectsManager.m; sourceTree = "<group>"; };
+		81D4DAE41468BFB800BA965E /* RunStatsCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunStatsCalculator.h; sourceTree = "<group>"; };
+		81D4DAE51468BFB800BA965E /* RunStatsCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunStatsCalculator.m; sourceTree = "<group>"; };
+		81D4DAE61468BFB800BA965E /* SettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsManager.h; sourceTree = "<group>"; };
+		81D4DAE71468BFB800BA965E /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
+		81D4DAE81468BFB800BA965E /* UnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitConverter.h; sourceTree = "<group>"; };
+		81D4DAE91468BFB800BA965E /* UnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +125,7 @@
 				81D4DA7C1468B72A00BA965E /* Foundation.framework in Frameworks */,
 				81D4DA7E1468B72A00BA965E /* CoreGraphics.framework in Frameworks */,
 				81D4DA801468B72A00BA965E /* CoreData.framework in Frameworks */,
+				81D4DAC11468BC6500BA965E /* libFlurryAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +148,8 @@
 			children = (
 				81D4DA811468B72A00BA965E /* Quickpace */,
 				81D4DAA91468B72A00BA965E /* QuickpaceTests */,
+				81D4DAC31468BC9300BA965E /* QuickpaceImages */,
+				81D4DABE1468BC6500BA965E /* FlurryAnalytics */,
 				81D4DA781468B72A00BA965E /* Frameworks */,
 				81D4DA761468B72A00BA965E /* Products */,
 			);
@@ -124,6 +179,14 @@
 		81D4DA811468B72A00BA965E /* Quickpace */ = {
 			isa = PBXGroup;
 			children = (
+				81D4DAE21468BFB800BA965E /* EffectsManager.h */,
+				81D4DAE31468BFB800BA965E /* EffectsManager.m */,
+				81D4DAE41468BFB800BA965E /* RunStatsCalculator.h */,
+				81D4DAE51468BFB800BA965E /* RunStatsCalculator.m */,
+				81D4DAE61468BFB800BA965E /* SettingsManager.h */,
+				81D4DAE71468BFB800BA965E /* SettingsManager.m */,
+				81D4DAE81468BFB800BA965E /* UnitConverter.h */,
+				81D4DAE91468BFB800BA965E /* UnitConverter.m */,
 				81D4DA8A1468B72A00BA965E /* AppDelegate.h */,
 				81D4DA8B1468B72A00BA965E /* AppDelegate.m */,
 				81D4DA901468B72A00BA965E /* MainViewController.h */,
@@ -166,6 +229,39 @@
 				81D4DAAC1468B72A00BA965E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81D4DABE1468BC6500BA965E /* FlurryAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				81D4DABF1468BC6500BA965E /* FlurryAnalytics.h */,
+				81D4DAC01468BC6500BA965E /* libFlurryAnalytics.a */,
+			);
+			name = FlurryAnalytics;
+			path = Quickpace/FlurryAnalytics;
+			sourceTree = "<group>";
+		};
+		81D4DAC31468BC9300BA965E /* QuickpaceImages */ = {
+			isa = PBXGroup;
+			children = (
+				81D4DAC41468BC9300BA965E /* Default.png */,
+				81D4DAC51468BC9300BA965E /* Default@2x.png */,
+				81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */,
+				81D4DAC71468BC9300BA965E /* icon-72.png */,
+				81D4DAC81468BC9300BA965E /* icon-small-50.png */,
+				81D4DAC91468BC9300BA965E /* icon-small.png */,
+				81D4DACA1468BC9300BA965E /* icon-small@2x.png */,
+				81D4DACB1468BC9300BA965E /* icon.png */,
+				81D4DACC1468BC9300BA965E /* icon@2x.png */,
+				81D4DACD1468BC9300BA965E /* quickpace blue background.png */,
+				81D4DACE1468BC9300BA965E /* quickpace blue result outline etched.png */,
+				81D4DACF1468BC9300BA965E /* quickpace gold button down.png */,
+				81D4DAD01468BC9300BA965E /* quickpace gold button up.png */,
+				81D4DAD11468BC9300BA965E /* SettingsGear.png */,
+				81D4DAD21468BC9300BA965E /* SettingsGearGlowing.png */,
+			);
+			name = QuickpaceImages;
+			path = Quickpace/QuickpaceImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +337,21 @@
 				81D4DA861468B72A00BA965E /* InfoPlist.strings in Resources */,
 				81D4DA981468B72A00BA965E /* MainViewController.xib in Resources */,
 				81D4DA9B1468B72A00BA965E /* FlipsideViewController.xib in Resources */,
+				81D4DAD31468BC9300BA965E /* Default.png in Resources */,
+				81D4DAD41468BC9300BA965E /* Default@2x.png in Resources */,
+				81D4DAD51468BC9300BA965E /* FirstTimeSettingsMessage.png in Resources */,
+				81D4DAD61468BC9300BA965E /* icon-72.png in Resources */,
+				81D4DAD71468BC9300BA965E /* icon-small-50.png in Resources */,
+				81D4DAD81468BC9300BA965E /* icon-small.png in Resources */,
+				81D4DAD91468BC9300BA965E /* icon-small@2x.png in Resources */,
+				81D4DADA1468BC9300BA965E /* icon.png in Resources */,
+				81D4DADB1468BC9300BA965E /* icon@2x.png in Resources */,
+				81D4DADC1468BC9300BA965E /* quickpace blue background.png in Resources */,
+				81D4DADD1468BC9300BA965E /* quickpace blue result outline etched.png in Resources */,
+				81D4DADE1468BC9300BA965E /* quickpace gold button down.png in Resources */,
+				81D4DADF1468BC9300BA965E /* quickpace gold button up.png in Resources */,
+				81D4DAE01468BC9300BA965E /* SettingsGear.png in Resources */,
+				81D4DAE11468BC9300BA965E /* SettingsGearGlowing.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +391,10 @@
 				81D4DA8F1468B72A00BA965E /* Quickpace.xcdatamodeld in Sources */,
 				81D4DA921468B72A00BA965E /* MainViewController.m in Sources */,
 				81D4DA951468B72A00BA965E /* FlipsideViewController.m in Sources */,
+				81D4DAEA1468BFB800BA965E /* EffectsManager.m in Sources */,
+				81D4DAEB1468BFB800BA965E /* RunStatsCalculator.m in Sources */,
+				81D4DAEC1468BFB800BA965E /* SettingsManager.m in Sources */,
+				81D4DAED1468BFB800BA965E /* UnitConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D4DAEE1468BFD600BA965E /* EffectsManager.m in Sources */,
+				81D4DAEF1468BFD600BA965E /* RunStatsCalculator.m in Sources */,
+				81D4DAF01468BFD600BA965E /* SettingsManager.m in Sources */,
+				81D4DAF11468BFD600BA965E /* UnitConverter.m in Sources */,
+				81D4DAF21468BFD600BA965E /* AppDelegate.m in Sources */,
+				81D4DAF31468BFD600BA965E /* MainViewController.m in Sources */,
+				81D4DAF41468BFD600BA965E /* FlipsideViewController.m in Sources */,
 				81D4DAB11468B72A00BA965E /* QuickpaceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +510,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -399,6 +525,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +587,7 @@
 				81D4DAB61468B72A00BA965E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81D4DAB71468B72A00BA965E /* Build configuration list for PBXNativeTarget "QuickpaceTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +596,7 @@
 				81D4DAB91468B72A00BA965E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

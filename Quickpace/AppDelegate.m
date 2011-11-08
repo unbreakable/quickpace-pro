@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
 #import "MainViewController.h"
+#import "FlurryAnalytics.h"
 
 @implementation AppDelegate
 
@@ -27,6 +27,16 @@
     self.mainViewController.managedObjectContext = self.managedObjectContext;
     [self.window makeKeyAndVisible];
     return YES;
+    
+    // Call a SettingsManager
+    SettingsManager *userSettings = [[SettingsManager alloc] init];
+    
+    // Fire up Flurry (if user permits)
+    if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
+        [FlurryAnalytics startSession:@"SI3MMAED13G6AARE9FXM"];
+        
+    // Pull version number from Info plist and put in Settings so it is visible in the Settings.app
+    [userSettings saveVersion:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -57,6 +67,8 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
+    MainViewController *controller = (MainViewController *)self.window.rootViewController;
+    [controller displayWelcome];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
