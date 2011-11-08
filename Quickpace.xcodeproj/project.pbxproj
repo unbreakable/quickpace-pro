@@ -463,6 +463,64 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		81D2796614699EAF0024D13A /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		81D2796714699EAF0024D13A /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
+				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		81D2796814699EAF0024D13A /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quickpace.app/Quickpace";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
+				INFOPLIST_FILE = "QuickpaceTests/QuickpaceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 		81D4DAB21468B72A00BA965E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -483,7 +541,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -494,15 +552,18 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -514,7 +575,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
@@ -530,7 +591,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
@@ -582,6 +643,7 @@
 			buildConfigurations = (
 				81D4DAB21468B72A00BA965E /* Debug */,
 				81D4DAB31468B72A00BA965E /* Release */,
+				81D2796614699EAF0024D13A /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -591,6 +653,7 @@
 			buildConfigurations = (
 				81D4DAB51468B72A00BA965E /* Debug */,
 				81D4DAB61468B72A00BA965E /* Release */,
+				81D2796714699EAF0024D13A /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -600,6 +663,7 @@
 			buildConfigurations = (
 				81D4DAB81468B72A00BA965E /* Debug */,
 				81D4DAB91468B72A00BA965E /* Release */,
+				81D2796814699EAF0024D13A /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
