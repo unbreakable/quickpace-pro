@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
 		81D4DA7A1468B72A00BA965E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA791468B72A00BA965E /* UIKit.framework */; };
 		81D4DA7C1468B72A00BA965E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7B1468B72A00BA965E /* Foundation.framework */; };
 		81D4DA7E1468B72A00BA965E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
 		81D4DA751468B72A00BA965E /* Quickpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D4DA791468B72A00BA965E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81D4DA7B1468B72A00BA965E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				81D4DA811468B72A00BA965E /* Quickpace */,
+				815936EB1468D27100D74860 /* Settings.bundle */,
 				81D4DAA91468B72A00BA965E /* QuickpaceTests */,
 				81D4DAC31468BC9300BA965E /* QuickpaceImages */,
 				81D4DABE1468BC6500BA965E /* FlurryAnalytics */,
@@ -352,6 +355,7 @@
 				81D4DADF1468BC9300BA965E /* quickpace gold button up.png in Resources */,
 				81D4DAE01468BC9300BA965E /* SettingsGear.png in Resources */,
 				81D4DAE11468BC9300BA965E /* SettingsGearGlowing.png in Resources */,
+				815936EC1468D27100D74860 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
