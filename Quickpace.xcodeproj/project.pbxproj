@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
+		81D27950146912050024D13A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2794F146912050024D13A /* icon.png */; };
+		81D27952146912250024D13A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D27951146912250024D13A /* icon@2x.png */; };
+		81D2795C146919C10024D13A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2795A146919C10024D13A /* Default.png */; };
+		81D2795D146919C10024D13A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2795B146919C10024D13A /* Default@2x.png */; };
 		81D4DA7A1468B72A00BA965E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA791468B72A00BA965E /* UIKit.framework */; };
 		81D4DA7C1468B72A00BA965E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7B1468B72A00BA965E /* Foundation.framework */; };
 		81D4DA7E1468B72A00BA965E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */; };
@@ -27,15 +31,11 @@
 		81D4DAAE1468B72A00BA965E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAAC1468B72A00BA965E /* InfoPlist.strings */; };
 		81D4DAB11468B72A00BA965E /* QuickpaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAB01468B72A00BA965E /* QuickpaceTests.m */; };
 		81D4DAC11468BC6500BA965E /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DAC01468BC6500BA965E /* libFlurryAnalytics.a */; };
-		81D4DAD31468BC9300BA965E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC41468BC9300BA965E /* Default.png */; };
-		81D4DAD41468BC9300BA965E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC51468BC9300BA965E /* Default@2x.png */; };
 		81D4DAD51468BC9300BA965E /* FirstTimeSettingsMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */; };
 		81D4DAD61468BC9300BA965E /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC71468BC9300BA965E /* icon-72.png */; };
 		81D4DAD71468BC9300BA965E /* icon-small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC81468BC9300BA965E /* icon-small-50.png */; };
 		81D4DAD81468BC9300BA965E /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC91468BC9300BA965E /* icon-small.png */; };
 		81D4DAD91468BC9300BA965E /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACA1468BC9300BA965E /* icon-small@2x.png */; };
-		81D4DADA1468BC9300BA965E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACB1468BC9300BA965E /* icon.png */; };
-		81D4DADB1468BC9300BA965E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACC1468BC9300BA965E /* icon@2x.png */; };
 		81D4DADC1468BC9300BA965E /* quickpace blue background.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACD1468BC9300BA965E /* quickpace blue background.png */; };
 		81D4DADD1468BC9300BA965E /* quickpace blue result outline etched.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACE1468BC9300BA965E /* quickpace blue result outline etched.png */; };
 		81D4DADE1468BC9300BA965E /* quickpace gold button down.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACF1468BC9300BA965E /* quickpace gold button down.png */; };
@@ -67,6 +67,10 @@
 
 /* Begin PBXFileReference section */
 		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
+		81D2794F146912050024D13A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
+		81D27951146912250024D13A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
+		81D2795A146919C10024D13A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../QuickpaceImages/Default.png; sourceTree = "<group>"; };
+		81D2795B146919C10024D13A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../QuickpaceImages/Default@2x.png"; sourceTree = "<group>"; };
 		81D4DA751468B72A00BA965E /* Quickpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D4DA791468B72A00BA965E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81D4DA7B1468B72A00BA965E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -93,15 +97,11 @@
 		81D4DAB01468B72A00BA965E /* QuickpaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickpaceTests.m; sourceTree = "<group>"; };
 		81D4DABF1468BC6500BA965E /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
 		81D4DAC01468BC6500BA965E /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
-		81D4DAC41468BC9300BA965E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		81D4DAC51468BC9300BA965E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FirstTimeSettingsMessage.png; sourceTree = "<group>"; };
 		81D4DAC71468BC9300BA965E /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		81D4DAC81468BC9300BA965E /* icon-small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small-50.png"; sourceTree = "<group>"; };
 		81D4DAC91468BC9300BA965E /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		81D4DACA1468BC9300BA965E /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
-		81D4DACB1468BC9300BA965E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		81D4DACC1468BC9300BA965E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		81D4DACD1468BC9300BA965E /* quickpace blue background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace blue background.png"; sourceTree = "<group>"; };
 		81D4DACE1468BC9300BA965E /* quickpace blue result outline etched.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace blue result outline etched.png"; sourceTree = "<group>"; };
 		81D4DACF1468BC9300BA965E /* quickpace gold button down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace gold button down.png"; sourceTree = "<group>"; };
@@ -247,15 +247,15 @@
 		81D4DAC31468BC9300BA965E /* QuickpaceImages */ = {
 			isa = PBXGroup;
 			children = (
-				81D4DAC41468BC9300BA965E /* Default.png */,
-				81D4DAC51468BC9300BA965E /* Default@2x.png */,
-				81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */,
+				81D2795A146919C10024D13A /* Default.png */,
+				81D2795B146919C10024D13A /* Default@2x.png */,
+				81D2794F146912050024D13A /* icon.png */,
+				81D27951146912250024D13A /* icon@2x.png */,
 				81D4DAC71468BC9300BA965E /* icon-72.png */,
 				81D4DAC81468BC9300BA965E /* icon-small-50.png */,
 				81D4DAC91468BC9300BA965E /* icon-small.png */,
 				81D4DACA1468BC9300BA965E /* icon-small@2x.png */,
-				81D4DACB1468BC9300BA965E /* icon.png */,
-				81D4DACC1468BC9300BA965E /* icon@2x.png */,
+				81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */,
 				81D4DACD1468BC9300BA965E /* quickpace blue background.png */,
 				81D4DACE1468BC9300BA965E /* quickpace blue result outline etched.png */,
 				81D4DACF1468BC9300BA965E /* quickpace gold button down.png */,
@@ -340,15 +340,11 @@
 				81D4DA861468B72A00BA965E /* InfoPlist.strings in Resources */,
 				81D4DA981468B72A00BA965E /* MainViewController.xib in Resources */,
 				81D4DA9B1468B72A00BA965E /* FlipsideViewController.xib in Resources */,
-				81D4DAD31468BC9300BA965E /* Default.png in Resources */,
-				81D4DAD41468BC9300BA965E /* Default@2x.png in Resources */,
 				81D4DAD51468BC9300BA965E /* FirstTimeSettingsMessage.png in Resources */,
 				81D4DAD61468BC9300BA965E /* icon-72.png in Resources */,
 				81D4DAD71468BC9300BA965E /* icon-small-50.png in Resources */,
 				81D4DAD81468BC9300BA965E /* icon-small.png in Resources */,
 				81D4DAD91468BC9300BA965E /* icon-small@2x.png in Resources */,
-				81D4DADA1468BC9300BA965E /* icon.png in Resources */,
-				81D4DADB1468BC9300BA965E /* icon@2x.png in Resources */,
 				81D4DADC1468BC9300BA965E /* quickpace blue background.png in Resources */,
 				81D4DADD1468BC9300BA965E /* quickpace blue result outline etched.png in Resources */,
 				81D4DADE1468BC9300BA965E /* quickpace gold button down.png in Resources */,
@@ -356,6 +352,10 @@
 				81D4DAE01468BC9300BA965E /* SettingsGear.png in Resources */,
 				81D4DAE11468BC9300BA965E /* SettingsGearGlowing.png in Resources */,
 				815936EC1468D27100D74860 /* Settings.bundle in Resources */,
+				81D27950146912050024D13A /* icon.png in Resources */,
+				81D27952146912250024D13A /* icon@2x.png in Resources */,
+				81D2795C146919C10024D13A /* Default.png in Resources */,
+				81D2795D146919C10024D13A /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +483,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -501,7 +501,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -514,7 +514,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
@@ -530,7 +530,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/FlurryAnalytics\"",
