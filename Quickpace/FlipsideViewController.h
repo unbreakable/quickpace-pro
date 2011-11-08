@@ -47,7 +47,7 @@
 @property (nonatomic, retain) IBOutlet UITextField        *inchEntry;
 @property (nonatomic, retain) IBOutlet UILabel            *feetInchMarkers;
 @property (nonatomic, retain) IBOutlet UIButton           *keyboardDismisser;
-@property (weak,   nonatomic) IBOutlet id                 <FlipsideViewControllerDelegate> delegate;
+@property (nonatomic, retain) IBOutlet id                 <FlipsideViewControllerDelegate> delegate;
 
 - (IBAction)done:(id)sender;
 
