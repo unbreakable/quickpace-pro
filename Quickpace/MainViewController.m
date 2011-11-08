@@ -75,10 +75,9 @@
     
     // Usage info
     SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
+    NSString *userRunTime = [NSString stringWithFormat:@"Run time %@:%@:%@",hoursEntry.text, minutesEntry.text, secondsEntry.text];
     NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:
-                               hoursEntry.text, @"hours", 
-                               minutesEntry.text, @"minutes", 
-                               secondsEntry.text, @"seconds", 
+                               userRunTime, @"runTime", 
                                paceDisplayText.text, @"pace", 
                                speedDisplay.text, @"speed", 
                                calorieDisplay.text, @"calories",
@@ -89,8 +88,6 @@
                                [userSettings getUnitsDefault], @"units", 
                                nil];
     [FlurryAnalytics logEvent:@"Calculate button tapped" withParameters:flurryDic];
-    
-    NSLog(@"Age is %@", [userSettings getAgeDefault]);
 }
 
 -(void) displayWelcome
