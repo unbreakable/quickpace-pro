@@ -12,6 +12,10 @@
 	<array>
 		<string>icon.png</string>
 		<string>icon@2x.png</string>
+		<string>icon-72.png</string>
+		<string>icon-small.png</string>
+		<string>icon-small@2x.png</string>
+		<string>icon-small-50.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -49,6 +53,7 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 </dict>
 </plist>
