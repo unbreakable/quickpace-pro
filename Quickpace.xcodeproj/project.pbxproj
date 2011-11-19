@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
+		8186FCCF14735E0E00A2D1C9 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8186FCCE14735E0E00A2D1C9 /* libprofile_rt.dylib */; };
 		81D27950146912050024D13A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2794F146912050024D13A /* icon.png */; };
 		81D27952146912250024D13A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D27951146912250024D13A /* icon@2x.png */; };
 		81D2795C146919C10024D13A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2795A146919C10024D13A /* Default.png */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
+		8186FCCE14735E0E00A2D1C9 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
 		81D2794F146912050024D13A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		81D27951146912250024D13A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		81D2795A146919C10024D13A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../QuickpaceImages/Default.png; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8186FCCF14735E0E00A2D1C9 /* libprofile_rt.dylib in Frameworks */,
 				81D4DAA31468B72A00BA965E /* SenTestingKit.framework in Frameworks */,
 				81D4DAA41468B72A00BA965E /* UIKit.framework in Frameworks */,
 				81D4DAA51468B72A00BA965E /* Foundation.framework in Frameworks */,
@@ -170,6 +173,7 @@
 		81D4DA781468B72A00BA965E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8186FCCE14735E0E00A2D1C9 /* libprofile_rt.dylib */,
 				81D4DA791468B72A00BA965E /* UIKit.framework */,
 				81D4DA7B1468B72A00BA965E /* Foundation.framework */,
 				81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */,
@@ -512,9 +516,16 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "QuickpaceTests/QuickpaceTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -609,9 +620,16 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "QuickpaceTests/QuickpaceTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -626,9 +644,21 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "QuickpaceTests/QuickpaceTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/usr/lib\"",
+				);
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-ftest-coverage",
+					"-fprofile-arcs",
+				);
+				OTHER_LDFLAGS = "-lgcov";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

@@ -192,7 +192,7 @@
 {
 	UITextField *textField = (UITextField *)sender;
 	int characterCount = [textField.text length];
-	if (characterCount == 2) 
+	if (characterCount == 2)
     {
 		[self textFieldShouldReturn:textField];
 	}

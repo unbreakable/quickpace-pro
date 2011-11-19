@@ -26,7 +26,6 @@
     self.window.rootViewController = self.mainViewController;
     self.mainViewController.managedObjectContext = self.managedObjectContext;
     [self.window makeKeyAndVisible];
-    return YES;
     
     // Call a SettingsManager
     SettingsManager *userSettings = [[SettingsManager alloc] init];
@@ -37,6 +36,8 @@
             
     // Pull version number from Info plist and put in Settings so it is visible in the Settings.app
     [userSettings saveVersion:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
+
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
