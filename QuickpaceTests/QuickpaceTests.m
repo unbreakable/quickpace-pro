@@ -15,7 +15,7 @@
     [super setUp];
     
     // Set-up code here.
-    app_delegate = [[UIApplication sharedApplication] delegate];
+    app_delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 -(void) testAppDelegate
@@ -110,7 +110,7 @@
     [userSettings saveUnitsSetting:1];
     
     NSString *result = [runCalculator calculatePaceGivenHours:@"4" andMinutes:@"0" andSeconds:@"0" andDistance:@"26.2"];
-    NSString *expected = [NSString stringWithString:@"9:10 per kilometer"];
+    NSString *expected = [NSString stringWithString:@"9:10 per km"];
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
 
@@ -187,7 +187,7 @@
     STAssertEqualObjects (expectedCal, calResult, @"Did not compute calories correctly, expecting %@, got %@", expectedCal, calResult);
     
     NSString *paceResult = [runCalculator calculatePaceGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
-    NSString *expectedPace = [NSString stringWithString:@"6:00 per kilometer"];
+    NSString *expectedPace = [NSString stringWithString:@"6:00 per km"];
     STAssertEqualObjects (expectedPace, paceResult, @"Did not compute calories correctly, expecting %@, got %@", expectedPace, paceResult);
     
     NSString *speedResult = [runCalculator calculateSpeedGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
@@ -216,7 +216,7 @@
     STAssertEqualObjects (expectedCal, calResult, @"Did not compute calories correctly, expecting %@, got %@", expectedCal, calResult);
     
     NSString *paceResult = [runCalculator calculatePaceGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
-    NSString *expectedPace = [NSString stringWithString:@"0:00 per kilometer"];
+    NSString *expectedPace = [NSString stringWithString:@"0:00 per km"];
     STAssertEqualObjects (expectedPace, paceResult, @"Did not compute calories correctly, expecting %@, got %@", expectedPace, paceResult);
     
     NSString *speedResult = [runCalculator calculateSpeedGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];

@@ -97,7 +97,7 @@
             thePaceResult = [NSString stringWithFormat:@"%i:%.0f per mile", thePaceMinutes, thePaceSeconds];
         }
         else {
-            thePaceResult = [NSString stringWithFormat: @"%i:%.0f per kilometer", thePaceMinutes, thePaceSeconds];
+            thePaceResult = [NSString stringWithFormat: @"%i:%.0f per km", thePaceMinutes, thePaceSeconds];
         }
     }
     else
@@ -106,7 +106,7 @@
             thePaceResult = [NSString stringWithFormat:@"%i:0%.0f per mile", thePaceMinutes, thePaceSeconds];
         }
         else {
-            thePaceResult = [NSString stringWithFormat: @"%i:0%.0f per kilometer", thePaceMinutes, thePaceSeconds];
+            thePaceResult = [NSString stringWithFormat: @"%i:0%.0f per km", thePaceMinutes, thePaceSeconds];
         }
     }
     

@@ -6,12 +6,8 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
-#import "RunStatsCalculator.h"
 #import <CoreData/CoreData.h>
-#import "SettingsManager.h"
-#import "FlurryAnalytics.h"
-#import "EffectsManager.h"
+#import "FlipsideViewController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
 {
@@ -42,11 +38,13 @@
 @property (nonatomic, retain) IBOutlet UIImageView            *enterYourSettingsCallout;
 @property (strong, nonatomic)          NSManagedObjectContext *managedObjectContext;
 
--(IBAction) showInfo:(id)sender;
--(IBAction) calculateRun;
--(IBAction) clearAll;
--(IBAction) textFieldDidUpdate:(id)sender;
--(void)     resetDisplayLabels;
--(void)     displayWelcome;
+- (IBAction) showInfo:(id)sender;
+- (IBAction) calculateRun;
+- (IBAction) clearAll;
+- (IBAction) textFieldDidUpdate:(id)sender;
+- (void)     resetDisplayLabels;
+- (void)     displayWelcome;
+- (void)     applicationDidBecomeActive: (NSNotification *)notification;
+- (void)     saveRunWithPace: (NSString *)aPace andDistance: (NSString *)aDistance;
 
 @end

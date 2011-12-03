@@ -8,11 +8,13 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "HistoryViewController.h"
 #import "FlurryAnalytics.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize tabBarController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
@@ -21,10 +23,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    // This programmatic creation of tab bars pattern comes from the non-storyboard tab bar template in Xcode
+    UIViewController *viewController1 = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    UIViewController *viewController2 = [[HistoryViewController alloc] initWithStyle:UITableViewStylePlain];
+	UINavigationController *theNavigationController = [[UINavigationController alloc] initWithRootViewController:viewController2];
+    viewController2.navigationItem.title=@"Run History";
+    theNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, theNavigationController, nil];
     self.window.rootViewController = self.mainViewController;
+    
     self.mainViewController.managedObjectContext = self.managedObjectContext;
+    [_window addSubview:tabBarController.view];
     [self.window makeKeyAndVisible];
     
     // Call a SettingsManager
@@ -32,8 +44,16 @@
     
     // Fire up Flurry (if user permits)
     if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
+    {
         [FlurryAnalytics startSession:@"SI3MMAED13G6AARE9FXM"];
-            
+        [FlurryAnalytics setAge:[[userSettings getAgeDefault] intValue]];
+        
+        if ([[userSettings getSexDefault] isEqualToString:@"male"]) 
+            [FlurryAnalytics setGender:@"m"];
+        else
+            [FlurryAnalytics setGender:@"f"];
+    }
+    
     // Pull version number from Info plist and put in Settings so it is visible in the Settings.app
     [userSettings saveVersion:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
 
@@ -68,8 +88,8 @@
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
-    MainViewController *controller = (MainViewController *)self.window.rootViewController;
-    [controller displayWelcome];
+//    MainViewController *controller = (MainViewController *)self.window.rootViewController;
+//    [controller displayWelcome];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

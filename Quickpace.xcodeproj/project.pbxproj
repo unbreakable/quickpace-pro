@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
+		816B967F148AC5C10021D539 /* Calculator-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 816B967D148AC5C10021D539 /* Calculator-icon.png */; };
+		816B9680148AC5C10021D539 /* Calculator-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816B967E148AC5C10021D539 /* Calculator-icon@2x.png */; };
 		8186FCCF14735E0E00A2D1C9 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8186FCCE14735E0E00A2D1C9 /* libprofile_rt.dylib */; };
+		8188C41C1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
+		8188C41D1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
+		8188C41E1487E5B4008E6A30 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */; };
+		8188C41F1487E5B4008E6A30 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */; };
+		8188C44C14896D6E008E6A30 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C44B14896D6E008E6A30 /* Run.m */; };
+		8188C44D14896D6E008E6A30 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C44B14896D6E008E6A30 /* Run.m */; };
 		81D27950146912050024D13A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2794F146912050024D13A /* icon.png */; };
 		81D27952146912250024D13A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D27951146912250024D13A /* icon@2x.png */; };
 		81D2795C146919C10024D13A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2795A146919C10024D13A /* Default.png */; };
@@ -68,7 +76,14 @@
 
 /* Begin PBXFileReference section */
 		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
+		816B967D148AC5C10021D539 /* Calculator-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calculator-icon.png"; sourceTree = "<group>"; };
+		816B967E148AC5C10021D539 /* Calculator-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calculator-icon@2x.png"; sourceTree = "<group>"; };
 		8186FCCE14735E0E00A2D1C9 /* libprofile_rt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libprofile_rt.dylib; path = usr/lib/libprofile_rt.dylib; sourceTree = DEVELOPER_DIR; };
+		8188C4191487E5B4008E6A30 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		8188C41A1487E5B4008E6A30 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
+		8188C44A14896D6E008E6A30 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
+		8188C44B14896D6E008E6A30 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 		81D2794F146912050024D13A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../icon.png; sourceTree = "<group>"; };
 		81D27951146912250024D13A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../icon@2x.png"; sourceTree = "<group>"; };
 		81D2795A146919C10024D13A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../QuickpaceImages/Default.png; sourceTree = "<group>"; };
@@ -148,10 +163,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8188C4211487E5C6008E6A30 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */,
+				81D4DA961468B72A00BA965E /* MainViewController.xib */,
+				81D4DA991468B72A00BA965E /* FlipsideViewController.xib */,
+			);
+			name = Nibs;
+			path = Quickpace;
+			sourceTree = "<group>";
+		};
 		81D4DA6A1468B72A00BA965E = {
 			isa = PBXGroup;
 			children = (
 				81D4DA811468B72A00BA965E /* Quickpace */,
+				8188C4211487E5C6008E6A30 /* Nibs */,
 				815936EB1468D27100D74860 /* Settings.bundle */,
 				81D4DAA91468B72A00BA965E /* QuickpaceTests */,
 				81D4DAC31468BC9300BA965E /* QuickpaceImages */,
@@ -200,8 +227,10 @@
 				81D4DA911468B72A00BA965E /* MainViewController.m */,
 				81D4DA931468B72A00BA965E /* FlipsideViewController.h */,
 				81D4DA941468B72A00BA965E /* FlipsideViewController.m */,
-				81D4DA961468B72A00BA965E /* MainViewController.xib */,
-				81D4DA991468B72A00BA965E /* FlipsideViewController.xib */,
+				8188C4191487E5B4008E6A30 /* HistoryViewController.h */,
+				8188C41A1487E5B4008E6A30 /* HistoryViewController.m */,
+				8188C44A14896D6E008E6A30 /* Run.h */,
+				8188C44B14896D6E008E6A30 /* Run.m */,
 				81D4DA8D1468B72A00BA965E /* Quickpace.xcdatamodeld */,
 				81D4DA821468B72A00BA965E /* Supporting Files */,
 			);
@@ -251,6 +280,8 @@
 		81D4DAC31468BC9300BA965E /* QuickpaceImages */ = {
 			isa = PBXGroup;
 			children = (
+				816B967D148AC5C10021D539 /* Calculator-icon.png */,
+				816B967E148AC5C10021D539 /* Calculator-icon@2x.png */,
 				81D2795A146919C10024D13A /* Default.png */,
 				81D2795B146919C10024D13A /* Default@2x.png */,
 				81D2794F146912050024D13A /* icon.png */,
@@ -360,6 +391,9 @@
 				81D27952146912250024D13A /* icon@2x.png in Resources */,
 				81D2795C146919C10024D13A /* Default.png in Resources */,
 				81D2795D146919C10024D13A /* Default@2x.png in Resources */,
+				8188C41E1487E5B4008E6A30 /* HistoryViewController.xib in Resources */,
+				816B967F148AC5C10021D539 /* Calculator-icon.png in Resources */,
+				816B9680148AC5C10021D539 /* Calculator-icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D4DAAE1468B72A00BA965E /* InfoPlist.strings in Resources */,
+				8188C41F1487E5B4008E6A30 /* HistoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +438,8 @@
 				81D4DAEB1468BFB800BA965E /* RunStatsCalculator.m in Sources */,
 				81D4DAEC1468BFB800BA965E /* SettingsManager.m in Sources */,
 				81D4DAED1468BFB800BA965E /* UnitConverter.m in Sources */,
+				8188C41C1487E5B4008E6A30 /* HistoryViewController.m in Sources */,
+				8188C44C14896D6E008E6A30 /* Run.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +455,8 @@
 				81D4DAF31468BFD600BA965E /* MainViewController.m in Sources */,
 				81D4DAF41468BFD600BA965E /* FlipsideViewController.m in Sources */,
 				81D4DAB11468B72A00BA965E /* QuickpaceTests.m in Sources */,
+				8188C41D1487E5B4008E6A30 /* HistoryViewController.m in Sources */,
+				8188C44D14896D6E008E6A30 /* Run.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

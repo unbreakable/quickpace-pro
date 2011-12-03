@@ -7,6 +7,12 @@
 //
 
 #import "MainViewController.h"
+#import "AppDelegate.h"
+#import "RunStatsCalculator.h"
+#import "SettingsManager.h"
+#import "FlurryAnalytics.h"
+#import "EffectsManager.h"
+#import "Run.h"
 
 @implementation MainViewController
 
@@ -19,17 +25,34 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - Units methods
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = NSLocalizedString(@"Calculate", @"Calculate");
+        self.tabBarItem.image = [UIImage imageNamed:@"Calculator-icon"];
+    }
+    return self;
+}
 
--(void) resetDisplayLabels
+- (void)applicationDidBecomeActive: (NSNotification *)notification
+{
+    // This pattern of registering for notification from the didBecomeActive and using that to trigger the display
+    // welcome bubble and text comes from Beginning iPhone 4 in their Data Persistence chapter (archiver example)
+    [self displayWelcome];
+}
+
+#pragma mark - Action methods
+
+- (void)resetDisplayLabels
 {
     SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
     
     if ( [[userSettings getUnitsDefault] isEqualToString:@"metric"] )
     {
-        paceDisplayText.text = @"for each kilometer";
-        speedDisplay.text = @"in kilometers per hour";
-        distanceEntry.placeholder = @"in kilometers";
+        paceDisplayText.text = @"for each km";
+        speedDisplay.text = @"in km per hour";
+        distanceEntry.placeholder = @"in km";
     } else
     {
         paceDisplayText.text = @"for each mile";
@@ -39,19 +62,19 @@
     calorieDisplay.text = @"burned";
 }
 
--(IBAction) clearAll
+- (IBAction)clearAll
 {
     hoursEntry.text = @"";
     minutesEntry.text = @"";    
     secondsEntry.text = @"";
     distanceEntry.text = @"";
     [self resetDisplayLabels];
-    [minutesEntry becomeFirstResponder];
+    [hoursEntry becomeFirstResponder];
     
     [FlurryAnalytics logEvent:@"Clear button tapped"];
 }
 
--(IBAction) calculateRun
+- (IBAction)calculateRun
 {
     RunStatsCalculator *theRunStats = [[RunStatsCalculator alloc] init];
     
@@ -69,11 +92,15 @@
                                                         andMinutes:minutesEntry.text
                                                         andSeconds:secondsEntry.text
                                                        andDistance:distanceEntry.text];    
+    
+    // Save run to database
+    [self saveRunWithPace:paceDisplayText.text andDistance:distanceEntry.text];
+    
     // These are just here to dismiss the keyboard
     [distanceEntry becomeFirstResponder];
     [distanceEntry resignFirstResponder];
     
-    // Usage info
+    // Usage info (flurry)
     SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
     NSString *userRunTime = [NSString stringWithFormat:@"Run time %@:%@:%@",hoursEntry.text, minutesEntry.text, secondsEntry.text];
     NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:
@@ -90,7 +117,45 @@
     [FlurryAnalytics logEvent:@"Calculate button tapped" withParameters:flurryDic];
 }
 
--(void) displayWelcome
+- (void)saveRunWithPace: (NSString *)aPace andDistance: (NSString *)aDistance
+{
+    NSDate *aDate = [NSDate date];
+    NSString *distanceUnits;
+    NSString *fullDistance;
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+   
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Run"
+                                                         inManagedObjectContext:context];
+    [request setEntity:entityDescription];
+    
+    SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
+    
+    if ( [[userSettings getUnitsDefault] isEqualToString:@"metric"] )
+        distanceUnits = @"km";
+    else
+        distanceUnits = @"mi";
+    
+    fullDistance = [NSString stringWithFormat:@"%@ %@", aDistance, distanceUnits];
+    
+    NSManagedObject *theRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" 
+                                                            inManagedObjectContext:context];
+    [theRun setValue:aDate forKey:@"date"];
+    [theRun setValue:aPace forKey:@"pace"];
+    [theRun setValue:fullDistance forKey:@"distance"];
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+        
+    }
+}
+
+- (void)displayWelcome
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ( [defaults objectForKey:@"age"] && [defaults objectForKey:@"weight"] && [defaults objectForKey:@"height"] )
@@ -112,11 +177,21 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // This registers to be notified when the app became active so the welcome message can be displayed
+    // Basic idea came from Beginning iPhone 4 book, Data Persistence app (second version using archiving)
+    UIApplication *app = [UIApplication sharedApplication];
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(applicationDidBecomeActive:) 
+                                                 name:UIApplicationDidBecomeActiveNotification 
+                                               object:app];
+    
     [self resetDisplayLabels];
     
-    [minutesEntry becomeFirstResponder];    
+    [self displayWelcome]; // Called here and in AppDidBecomeActive. Necessary here so welcome fades out on initial load.
+    
+    [hoursEntry becomeFirstResponder];    
+    
+    [super viewDidLoad];
 }
 
 - (void)viewDidUnload
@@ -188,7 +263,7 @@
     }
 }
 
--(IBAction) textFieldDidUpdate:(id)sender
+- (IBAction)textFieldDidUpdate:(id)sender
 {
 	UITextField *textField = (UITextField *)sender;
 	int characterCount = [textField.text length];
