@@ -10,6 +10,7 @@
 		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
 		816B967F148AC5C10021D539 /* Calculator-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 816B967D148AC5C10021D539 /* Calculator-icon.png */; };
 		816B9680148AC5C10021D539 /* Calculator-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816B967E148AC5C10021D539 /* Calculator-icon@2x.png */; };
+		816B9685148AD4370021D539 /* Quickpace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8D1468B72A00BA965E /* Quickpace.xcdatamodeld */; };
 		8186FCCF14735E0E00A2D1C9 /* libprofile_rt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8186FCCE14735E0E00A2D1C9 /* libprofile_rt.dylib */; };
 		8188C41C1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
 		8188C41D1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
@@ -447,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816B9685148AD4370021D539 /* Quickpace.xcdatamodeld in Sources */,
 				81D4DAEE1468BFD600BA965E /* EffectsManager.m in Sources */,
 				81D4DAEF1468BFD600BA965E /* RunStatsCalculator.m in Sources */,
 				81D4DAF01468BFD600BA965E /* SettingsManager.m in Sources */,
