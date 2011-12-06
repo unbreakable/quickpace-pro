@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Run" representedClassName="Run" syncable="YES">
+        <attribute name="calories" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" attributeType="Date" syncable="YES"/>
         <attribute name="distance" attributeType="String" syncable="YES"/>
+        <attribute name="durationHrs" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="durationMin" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="durationSec" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pace" attributeType="String" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Run" positionX="1546" positionY="-1575" width="128" height="90"/>
+        <element name="Run" positionX="1546" positionY="-1575" width="128" height="165"/>
     </elements>
 </model>

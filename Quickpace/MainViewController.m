@@ -94,7 +94,7 @@
                                                        andDistance:distanceEntry.text];    
     
     // Save run to database
-    [self saveRunWithPace:paceDisplayText.text andDistance:distanceEntry.text];
+    [self saveRunWithPace:paceDisplayText.text andHours:hoursEntry.text andMinutes:minutesEntry.text andSeconds:secondsEntry.text andDistance:distanceEntry.text andSpeed:speedDisplay.text andCalories:calorieDisplay.text];
     
     // These are just here to dismiss the keyboard
     [distanceEntry becomeFirstResponder];
@@ -117,7 +117,13 @@
     [FlurryAnalytics logEvent:@"Calculate button tapped" withParameters:flurryDic];
 }
 
-- (void)saveRunWithPace: (NSString *)aPace andDistance: (NSString *)aDistance
+- (void)saveRunWithPace: (NSString *)aPace 
+               andHours: (NSString *)theHrs
+             andMinutes: (NSString *)theMin
+             andSeconds: (NSString *)theSec
+            andDistance: (NSString *)aDistance
+               andSpeed: (NSString *)aSpeed
+            andCalories: (NSString *)theCalories;
 {
     NSDate *aDate = [NSDate date];
     NSString *distanceUnits;
@@ -144,9 +150,15 @@
     
     NSManagedObject *theRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" 
                                                             inManagedObjectContext:context];
-    [theRun setValue:aDate forKey:@"date"];
-    [theRun setValue:aPace forKey:@"pace"];
+    [theRun setValue:aDate        forKey:@"date"];
+    [theRun setValue:aPace        forKey:@"pace"];
     [theRun setValue:fullDistance forKey:@"distance"];
+    [theRun setValue:theHrs       forKey:@"durationHrs"];
+    [theRun setValue:theMin       forKey:@"durationMin"];
+    [theRun setValue:theSec       forKey:@"durationSec"];
+    [theRun setValue:aSpeed       forKey:@"speed"];
+    [theRun setValue:theCalories  forKey:@"calories"];
+    
     
     NSError *error;
     if (![context save:&error]) {

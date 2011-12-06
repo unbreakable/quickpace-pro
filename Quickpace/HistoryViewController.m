@@ -8,8 +8,9 @@
 
 #import "HistoryViewController.h"
 #import "AppDelegate.h"
-#import "Run.h"
 #import "SettingsManager.h"
+#import "Run.h"
+#import "RunDetailViewController.h"
 
 @implementation HistoryViewController
 
@@ -96,6 +97,11 @@
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entityDescription];
+    
+    // Sort results
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+    [request setSortDescriptors:sortDescriptors];
     
     NSError *error;
     NSArray *runObjects = [context executeFetchRequest:request error:&error];
@@ -188,6 +194,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     // A date formatter for the run date.
     static NSDateFormatter *dateFormatter = nil;
 	if (dateFormatter == nil) {
@@ -203,6 +211,7 @@
 	
 	NSString *string = [NSString stringWithFormat:@"On %@",[dateFormatter stringFromDate:[run date]]];
     cell.detailTextLabel.text = string;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -265,13 +274,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    // Create and push a detail view controller.
+	RunDetailViewController *detailViewController = [[RunDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    Run *selectedRun = (Run *)[historyArray objectAtIndex:indexPath.row];
+    // Pass the selected book to the new view controller.
+    detailViewController.run = selectedRun;
+	[self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end

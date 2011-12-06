@@ -14,5 +14,10 @@
 @dynamic date;
 @dynamic pace;
 @dynamic distance;
+@dynamic speed;
+@dynamic calories;
+@dynamic durationHrs;
+@dynamic durationMin;
+@dynamic durationSec;
 
 @end

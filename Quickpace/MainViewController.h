@@ -45,6 +45,12 @@
 - (void)     resetDisplayLabels;
 - (void)     displayWelcome;
 - (void)     applicationDidBecomeActive: (NSNotification *)notification;
-- (void)     saveRunWithPace: (NSString *)aPace andDistance: (NSString *)aDistance;
+- (void)     saveRunWithPace: (NSString *)aPace 
+                    andHours: (NSString *)theHrs
+                  andMinutes: (NSString *)theMin
+                  andSeconds: (NSString *)theSec
+                 andDistance: (NSString *)aDistance
+                    andSpeed: (NSString *)aSpeed
+                 andCalories: (NSString *)theCalories;
 
 @end
