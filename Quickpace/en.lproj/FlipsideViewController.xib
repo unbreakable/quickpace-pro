@@ -42,7 +42,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIImageView" id="551055514">
+					<object class="IBUIImageView" id="285480035">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrameSize">{320, 460}</string>
@@ -54,7 +54,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Quickpace-treadmill-pattern-flip@2x.png</string>
+							<string key="NSResourceName">Treadmill-worn-640-2-flip.png</string>
 						</object>
 					</object>
 					<object class="IBUITextField" id="1055308396">
@@ -116,6 +116,10 @@
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									<int key="IBUIStyle">1</int>
 									<reference key="IBUINavigationItem" ref="350728194"/>
+									<object class="NSColor" key="IBUITintColor">
+										<int key="NSColorSpace">1</int>
+										<bytes key="NSRGB">MC4yMjYzMjgyNzA1IDAuMjI5MTQ2MDAyMSAwLjc0ODc2NDM0OTUAA</bytes>
+									</object>
 									<int key="IBUISystemItemIdentifier">0</int>
 								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -156,6 +160,46 @@
 							<object class="NSNull" id="4"/>
 							<reference ref="4"/>
 						</array>
+						<object class="NSColor" key="IBTintColor" id="207755878">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC43NzY3NDU4NTQ2IDAuNjczNDEzNTQ1MyAwLjEyNDY0NzYwMDIAA</bytes>
+						</object>
+					</object>
+					<object class="IBUISegmentedControl" id="1010473279">
+						<reference key="NSNextResponder" ref="249263867"/>
+						<int key="NSvFlags">1316</int>
+						<object class="NSPSMatrix" key="NSFrameMatrix"/>
+						<string key="NSFrame">{{61, 220}, {198, 44}}</string>
+						<reference key="NSSuperview" ref="249263867"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="561944298"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<int key="IBUITag">69</int>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBSegmentControlStyle">3</int>
+						<int key="IBNumberOfSegments">2</int>
+						<int key="IBSelectedSegmentIndex">0</int>
+						<array key="IBSegmentTitles">
+							<string>Male</string>
+							<string>Female</string>
+						</array>
+						<array class="NSMutableArray" key="IBSegmentWidths">
+							<real value="0.0"/>
+							<real value="0.0"/>
+						</array>
+						<array class="NSMutableArray" key="IBSegmentEnabledStates">
+							<boolean value="YES"/>
+							<boolean value="YES"/>
+						</array>
+						<array class="NSMutableArray" key="IBSegmentContentOffsets">
+							<string>{0, 0}</string>
+							<string>{0, 0}</string>
+						</array>
+						<array class="NSMutableArray" key="IBSegmentImages">
+							<reference ref="4"/>
+							<reference ref="4"/>
+						</array>
+						<reference key="IBTintColor" ref="207755878"/>
 					</object>
 					<object class="IBUITextField" id="884694197">
 						<reference key="NSNextResponder" ref="249263867"/>
@@ -287,41 +331,6 @@
 						<float key="IBUIMinimumFontSize">10</float>
 						<reference key="IBUIFontDescription" ref="968548831"/>
 						<reference key="IBUIFont" ref="372878846"/>
-					</object>
-					<object class="IBUISegmentedControl" id="1010473279">
-						<reference key="NSNextResponder" ref="249263867"/>
-						<int key="NSvFlags">1316</int>
-						<object class="NSPSMatrix" key="NSFrameMatrix"/>
-						<string key="NSFrame">{{61, 220}, {198, 44}}</string>
-						<reference key="NSSuperview" ref="249263867"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="561944298"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<int key="IBUITag">69</int>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBSegmentControlStyle">3</int>
-						<int key="IBNumberOfSegments">2</int>
-						<int key="IBSelectedSegmentIndex">0</int>
-						<array key="IBSegmentTitles">
-							<string>Male</string>
-							<string>Female</string>
-						</array>
-						<array class="NSMutableArray" key="IBSegmentWidths">
-							<real value="0.0"/>
-							<real value="0.0"/>
-						</array>
-						<array class="NSMutableArray" key="IBSegmentEnabledStates">
-							<boolean value="YES"/>
-							<boolean value="YES"/>
-						</array>
-						<array class="NSMutableArray" key="IBSegmentContentOffsets">
-							<string>{0, 0}</string>
-							<string>{0, 0}</string>
-						</array>
-						<array class="NSMutableArray" key="IBSegmentImages">
-							<reference ref="4"/>
-							<reference ref="4"/>
-						</array>
 					</object>
 					<object class="IBUITextField" id="37537010">
 						<reference key="NSNextResponder" ref="249263867"/>
@@ -516,7 +525,7 @@
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="551055514"/>
+				<reference key="NSNextKeyView" ref="285480035"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">10</int>
 					<object class="NSImage" key="NSImage">
@@ -5166,13 +5175,11 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="objectID">40</int>
 						<reference key="object" ref="249263867"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="888117564"/>
 							<reference ref="884694197"/>
 							<reference ref="198128873"/>
 							<reference ref="561944298"/>
 							<reference ref="423636209"/>
 							<reference ref="367520359"/>
-							<reference ref="1010473279"/>
 							<reference ref="37537010"/>
 							<reference ref="132212557"/>
 							<reference ref="235181637"/>
@@ -5180,8 +5187,10 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<reference ref="136305202"/>
 							<reference ref="1055308396"/>
 							<reference ref="868890450"/>
+							<reference ref="285480035"/>
+							<reference ref="888117564"/>
+							<reference ref="1010473279"/>
 							<reference ref="119335858"/>
-							<reference ref="551055514"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -5278,7 +5287,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">101</int>
-						<reference key="object" ref="551055514"/>
+						<reference key="object" ref="285480035"/>
 						<reference key="parent" ref="249263867"/>
 					</object>
 				</array>
@@ -5456,7 +5465,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">Quickpace-treadmill-pattern-flip@2x.png</string>
+			<string key="NS.key.0">Treadmill-worn-640-2-flip.png</string>
 			<string key="NS.object.0">{640, 960}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>

@@ -192,6 +192,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+    
     }
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -275,7 +276,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Create and push a detail view controller.
-	RunDetailViewController *detailViewController = [[RunDetailViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    
+    RunDetailViewController *detailViewController = [[RunDetailViewController alloc] initWithNibName:@"RunDetailViewController" bundle:nil];
+    
     Run *selectedRun = (Run *)[historyArray objectAtIndex:indexPath.row];
     // Pass the selected book to the new view controller.
     detailViewController.run = selectedRun;

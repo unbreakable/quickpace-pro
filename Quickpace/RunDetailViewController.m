@@ -38,9 +38,20 @@
     
     // Configure the title, title bar, and table view.
 	self.title = @"Run Details";
+    //self.title.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	self.tableView.allowsSelectionDuringEditing = YES;
-
+    
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Treadmill-worn-640-2.png"]];
+    
+    /*
+    UIView *backgroundView = [[UIView alloc] init];
+    backgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"quickpace blue background.png"]];
+    [self.view addSubview:backgroundView];
+    */
+    
+    //This method produces odd artifacts in the background image:ATableViewController *yourTableViewController = [[ATableViewController alloc] initWithStyle:UITableViewStyleGrouped];yourTableViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TableViewBackground.png"]];[window addSubview:yourTableViewController.view];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -140,8 +151,28 @@
 			cell.detailTextLabel.text = run.distance;
 			break;
         case 2:
+        {
+            // Actually, just check to see if string is == @"" and if so, make it @"00"
 			cell.textLabel.text = @"Time";
-			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%@:%@", run.durationHrs, run.durationMin, run.durationSec];
+            NSString *runHrs, *runMin, *runSec;
+            
+            if ([run.durationHrs isEqualToString:@""]) 
+                runHrs = [NSString stringWithFormat:@"00"];
+            else
+                runHrs = run.durationHrs;
+    
+            if ([run.durationMin isEqualToString:@""]) 
+                runMin = [NSString stringWithFormat:@"00"];
+            else
+                runMin = run.durationMin;
+            
+            if ([run.durationSec isEqualToString:@""]) 
+                runSec = [NSString stringWithFormat:@"00"];
+            else
+                runSec = run.durationSec;
+            
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@:%@:%@", runHrs, runMin, runSec];
+        }
 			break;
         case 3:
 			cell.textLabel.text = @"Pace";

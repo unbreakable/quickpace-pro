@@ -28,10 +28,11 @@
     
     // This programmatic creation of tab bars pattern comes from the non-storyboard tab bar template in Xcode
     UIViewController *viewController1 = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    UIViewController *viewController2 = [[HistoryViewController alloc] initWithStyle:UITableViewStylePlain];
+    UIViewController *viewController2 = [[HistoryViewController alloc] initWithNibName:@"HistoryViewController" bundle:nil];
 	UINavigationController *theNavigationController = [[UINavigationController alloc] initWithRootViewController:viewController2];
     viewController2.navigationItem.title=@"Run History";
     theNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
+    theNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, theNavigationController, nil];
     self.window.rootViewController = self.mainViewController;
     
