@@ -41,27 +41,27 @@
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     NSString *result = [runCalculator calculateSpeedGivenHours:@"0" andMinutes:@"10" andSeconds:@"0" andDistance:@"1"];
     NSString *expected = @"6.00 mph";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute speed correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testSpeed02
-{ 
-    [self resetToDefaultSettings];
+{
     // Testing the pace seconds logic so it doesn't put something like "9:010 seconds" instead of "9:10"
+    [self resetToDefaultSettings];
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     NSString *result = [runCalculator calculateSpeedGivenHours:@"0" andMinutes:@"10" andSeconds:@"0" andDistance:@"0"];
     NSString *expected = @"0.0 mph";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute speed correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testSpeed03
 {
-    [self resetToDefaultSettings];
     // Testing the interpolator if-thens by taking the speed up really high
+    [self resetToDefaultSettings];
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     NSString *result = [runCalculator calculateSpeedGivenHours:@"0" andMinutes:@"4" andSeconds:@"40" andDistance:@"1"];
     NSString *expected = @"12.86 mph";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute speed correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testPace01
@@ -70,7 +70,7 @@
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     NSString *result = [runCalculator calculatePaceGivenHours:@"0" andMinutes:@"10" andSeconds:@"0" andDistance:@"1"];
     NSString *expected = @"10:00 per mile";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute pace correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testPace02
@@ -79,7 +79,7 @@
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     NSString *result = [runCalculator calculatePaceGivenHours:@"4" andMinutes:@"0" andSeconds:@"0" andDistance:@"26.2"];
     NSString *expected = @"9:10 per mile";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute pace correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testPace03
@@ -88,7 +88,7 @@
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     NSString *result = [runCalculator calculatePaceGivenHours:@"4" andMinutes:@"0" andSeconds:@"0" andDistance:@"0"];
     NSString *expected = @"0:00 per mile";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute pace correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testPace04
@@ -103,15 +103,26 @@
 -(void) testPace05
 { 
     // Same as test 02 but kilometer-style baby
-    [self resetToDefaultSettings];
     // Testing the pace seconds logic so it doesn't put something like "9:010 seconds" instead of "9:10"
+    [self resetToDefaultSettings];
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
     SettingsManager *userSettings = [[SettingsManager alloc] init];
     [userSettings saveUnitsSetting:1];
     
     NSString *result = [runCalculator calculatePaceGivenHours:@"4" andMinutes:@"0" andSeconds:@"0" andDistance:@"26.2"];
     NSString *expected = @"9:10 per km";
-    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+    STAssertEqualObjects (expected, result, @"Did not compute pace correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testPace06RoundingSeconds
+{
+    // Testing that pace does not round incorrectly to X minutes and 60 seconds, but rather X+1 minutes and 0 seconds.
+    [self resetToDefaultSettings];
+    RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
+    
+    NSString *result = [runCalculator calculatePaceGivenHours:@"0" andMinutes:@"17" andSeconds:@"59" andDistance:@"2"];
+    NSString *expected = @"9:00 per mile";
+    STAssertEqualObjects (expected, result, @"Did not compute pace correctly, expecting %@, got %@", expected, result);
 }
 
 -(void) testCalories01
@@ -188,11 +199,11 @@
     
     NSString *paceResult = [runCalculator calculatePaceGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
     NSString *expectedPace = @"6:00 per km";
-    STAssertEqualObjects (expectedPace, paceResult, @"Did not compute calories correctly, expecting %@, got %@", expectedPace, paceResult);
+    STAssertEqualObjects (expectedPace, paceResult, @"Did not compute pace correctly, expecting %@, got %@", expectedPace, paceResult);
     
     NSString *speedResult = [runCalculator calculateSpeedGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
     NSString *expectedSpeed = @"10.00 kph";
-    STAssertEqualObjects (expectedSpeed, speedResult, @"Did not compute calories correctly, expecting %@, got %@", expectedSpeed, speedResult);
+    STAssertEqualObjects (expectedSpeed, speedResult, @"Did not compute speed correctly, expecting %@, got %@", expectedSpeed, speedResult);
 }
 
 -(void) testMetricLabels02
@@ -217,11 +228,11 @@
     
     NSString *paceResult = [runCalculator calculatePaceGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
     NSString *expectedPace = @"0:00 per km";
-    STAssertEqualObjects (expectedPace, paceResult, @"Did not compute calories correctly, expecting %@, got %@", expectedPace, paceResult);
+    STAssertEqualObjects (expectedPace, paceResult, @"Did not compute pace correctly, expecting %@, got %@", expectedPace, paceResult);
     
     NSString *speedResult = [runCalculator calculateSpeedGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
     NSString *expectedSpeed = @"0.0 kph";
-    STAssertEqualObjects (expectedSpeed, speedResult, @"Did not compute calories correctly, expecting %@, got %@", expectedSpeed, speedResult);
+    STAssertEqualObjects (expectedSpeed, speedResult, @"Did not compute speed correctly, expecting %@, got %@", expectedSpeed, speedResult);
 }
 
 #pragma mark - Unit converter methods

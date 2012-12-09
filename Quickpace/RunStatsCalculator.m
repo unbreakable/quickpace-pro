@@ -73,7 +73,7 @@
     return theSpeedResult;
 }
 
- -(NSString *) calculatePaceGivenHours: (NSString *) someHours andMinutes: (NSString *) someMinutes andSeconds: (NSString *) someSeconds andDistance: (NSString *) someDistance;
+-(NSString *) calculatePaceGivenHours: (NSString *) someHours andMinutes: (NSString *) someMinutes andSeconds: (NSString *) someSeconds andDistance: (NSString *) someDistance;
 {
     // Define variables
     float theHours, theMinutes, theSeconds, theDistance, totalRunMinutes, thePaceSeconds;
@@ -91,8 +91,19 @@
     thePaceSeconds = [self paceSecondsGivenMinutes:totalRunMinutes andDistance:theDistance];
     thePaceMinutes = [self paceMinutesGivenMinutes:totalRunMinutes andDistance:theDistance];
     
-    if ( thePaceSeconds >= 9.449 )
+    if ( thePaceSeconds >= 59.449 )
     {
+        // If the seconds round up to 60, then make them "00" and add 1 to the minutes
+        if ([userUnits isEqualToString:@"imperial"]) {
+            thePaceResult = [NSString stringWithFormat:@"%i:00 per mile", thePaceMinutes+1];
+        }
+        else {
+            thePaceResult = [NSString stringWithFormat:@"%i:00 per km", thePaceMinutes+1];
+        }
+    }
+    else if ( thePaceSeconds >= 9.449 )
+    {
+        // If the seconds will be double digit (>=10 basically) just display paceSeconds as is.
         if ([userUnits isEqualToString:@"imperial"]) {
             thePaceResult = [NSString stringWithFormat:@"%i:%.0f per mile", thePaceMinutes, thePaceSeconds];
         }
@@ -102,6 +113,7 @@
     }
     else
     {
+        // If the seconds will be single digit (<10 basically) add a zero so the MM:SS displays right.
         if ([userUnits isEqualToString:@"imperial"]) {
             thePaceResult = [NSString stringWithFormat:@"%i:0%.0f per mile", thePaceMinutes, thePaceSeconds];
         }

@@ -42,6 +42,7 @@
 -(void) testPace03;
 -(void) testPace04;
 -(void) testPace05;
+-(void) testPace06RoundingSeconds;
 -(void) testCalories01;
 -(void) testCalories02;
 -(void) testCalories03;
