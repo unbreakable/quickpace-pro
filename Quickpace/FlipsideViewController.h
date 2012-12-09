@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UnitConverter.h"
 #import "SettingsManager.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 #import "EffectsManager.h"
 
 @class FlipsideViewController;

@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "RunStatsCalculator.h"
 #import "SettingsManager.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 #import "EffectsManager.h"
 #import "Run.h"
 
@@ -71,7 +71,7 @@
     [self resetDisplayLabels];
     [hoursEntry becomeFirstResponder];
     
-    [FlurryAnalytics logEvent:@"Clear button tapped"];
+    [Flurry logEvent:@"Clear button tapped"];
 }
 
 - (IBAction)calculateRun
@@ -114,7 +114,7 @@
                                [userSettings getWeightDefault], @"weight",  
                                [userSettings getUnitsDefault], @"units", 
                                nil];
-    [FlurryAnalytics logEvent:@"Calculate button tapped" withParameters:flurryDic];
+    [Flurry logEvent:@"Calculate button tapped" withParameters:flurryDic];
 }
 
 - (void)saveRunWithPace: (NSString *)aPace 
@@ -261,7 +261,7 @@
         return YES;
     }
     
-    [FlurryAnalytics logEvent:@"Keyboard 'Return' key used in Main view"];
+    [Flurry logEvent:@"Keyboard 'Return' key used in Main view"];
     
     return NO;
 }
@@ -294,7 +294,7 @@
     // Pulls any changes in the units and sets proper mile or kilometer labels
     [self resetDisplayLabels];
     
-    [FlurryAnalytics logEvent:@"User visited settings view"];
+    [Flurry logEvent:@"User visited settings view"];
 }
 
 - (IBAction)showInfo:(id)sender

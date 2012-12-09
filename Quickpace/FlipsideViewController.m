@@ -197,7 +197,7 @@
     }
     if (moveViewUp) [self scrollTheView:NO];
     
-    [FlurryAnalytics logEvent:@"Keyboard 'Return' key used in Settings view"];
+    [Flurry logEvent:@"Keyboard 'Return' key used in Settings view"];
     
     return YES;
 }
@@ -229,7 +229,7 @@
             if (moveViewUp) [self scrollTheView:NO];
         }
         
-        [FlurryAnalytics logEvent:@"User picked Imperial setting"];
+        [Flurry logEvent:@"User picked Imperial setting"];
     }
     else 
     {
@@ -255,7 +255,7 @@
             if (moveViewUp) [self scrollTheView:NO];
         }
         
-        [FlurryAnalytics logEvent:@"User picked Metric setting"];
+        [Flurry logEvent:@"User picked Metric setting"];
     }
 }
 
@@ -266,7 +266,7 @@
     [userSettings saveSexSetting:sexPicker.selectedSegmentIndex];
     
     NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:[userSettings getSexDefault], @"userSex", nil];
-    [FlurryAnalytics logEvent:@"Sex chosen" withParameters:flurryDic];
+    [Flurry logEvent:@"Sex chosen" withParameters:flurryDic];
 }
 
 -(IBAction) saveAgeSetting
@@ -276,7 +276,7 @@
     [userSettings saveAgeSetting:ageEntry.text];
     
     NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:[userSettings getAgeDefault], @"userAge", nil];
-    [FlurryAnalytics logEvent:@"Age chosen" withParameters:flurryDic];
+    [Flurry logEvent:@"Age chosen" withParameters:flurryDic];
 }
 
 -(IBAction) saveHeightSetting
@@ -292,7 +292,7 @@
         inchEntry.text = [NSString stringWithString:[imperialHeightValues objectForKey:@"inches"]];
         
         NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:metricHeightEntry.text, @"userHeight", @"Metric", @"units", nil];
-        [FlurryAnalytics logEvent:@"Height chosen" withParameters:flurryDic];
+        [Flurry logEvent:@"Height chosen" withParameters:flurryDic];
     }
     else
     {
@@ -305,7 +305,7 @@
         metricHeightEntry.text = [NSString stringWithString:[converter convertToCentimetersGivenFeetInches: imperialHeightValues]];
         
         NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:metricHeightEntry.text, @"userHeight", @"Imperial", @"units", nil];
-        [FlurryAnalytics logEvent:@"Height chosen" withParameters:flurryDic];
+        [Flurry logEvent:@"Height chosen" withParameters:flurryDic];
     }
     [userSettings saveHeightSetting:metricHeightEntry.text];
 }
@@ -320,14 +320,14 @@
         imperialWeightEntry.text = [NSString stringWithString:[converter convertToPoundsGivenKgs:metricWeightEntry.text]];        
         
         NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:imperialWeightEntry.text, @"userWeight", @"Imperial", @"units", nil];
-        [FlurryAnalytics logEvent:@"Weight chosen" withParameters:flurryDic];
+        [Flurry logEvent:@"Weight chosen" withParameters:flurryDic];
     }
     else
     {
         metricWeightEntry.text = [NSString stringWithString:[converter convertToKilogramsGivenLbs:imperialWeightEntry.text]];
         
         NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:metricWeightEntry.text, @"userWeight", @"Metric", @"units", nil];
-        [FlurryAnalytics logEvent:@"Weight chosen" withParameters:flurryDic];
+        [Flurry logEvent:@"Weight chosen" withParameters:flurryDic];
     }
     
     [userSettings saveWeightSetting:metricWeightEntry.text];

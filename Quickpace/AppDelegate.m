@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "HistoryViewController.h"
-#import "FlurryAnalytics.h"
+#import "Flurry.h"
 
 @implementation AppDelegate
 
@@ -46,13 +46,13 @@
     // Fire up Flurry (if user permits)
     if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
     {
-        [FlurryAnalytics startSession:@"SI3MMAED13G6AARE9FXM"];
-        [FlurryAnalytics setAge:[[userSettings getAgeDefault] intValue]];
+        [Flurry startSession:@"SI3MMAED13G6AARE9FXM"];
+        [Flurry setAge:[[userSettings getAgeDefault] intValue]];
         
         if ([[userSettings getSexDefault] isEqualToString:@"male"]) 
-            [FlurryAnalytics setGender:@"m"];
+            [Flurry setGender:@"m"];
         else
-            [FlurryAnalytics setGender:@"f"];
+            [Flurry setGender:@"f"];
     }
     
     // Pull version number from Info plist and put in Settings so it is visible in the Settings.app

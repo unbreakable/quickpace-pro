@@ -65,9 +65,9 @@
     else
     {
         if ([userUnits isEqualToString:@"imperial"])
-            theSpeedResult = [NSString stringWithString: @"0.0 mph"];
+            theSpeedResult = @"0.0 mph";
         else
-            theSpeedResult = [NSString stringWithString: @"0.0 kph"];
+            theSpeedResult = @"0.0 kph";
     }
     
     return theSpeedResult;
@@ -257,9 +257,9 @@
     if ( totalRunCalories <= 0 || isnan(totalRunCalories))
     {
         if ( [userUnits isEqualToString:@"imperial"] )
-            theCalorieResult = [NSString stringWithString:@"0.0 calories"];
+            theCalorieResult = @"0.0 calories";
         else
-            theCalorieResult = [NSString stringWithString:@"0.0 kilocalories"];
+            theCalorieResult = @"0.0 kilocalories";
     }
     else
     {

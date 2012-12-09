@@ -57,7 +57,7 @@
     if ([defaults objectForKey:@"gender"]) 
         sexString = [defaults objectForKey:@"gender"];
     else
-        sexString = [NSString stringWithString:@"male"];
+        sexString = @"male";
     
     return sexString;
 }
@@ -71,7 +71,7 @@
     if ([defaults objectForKey:@"age"])
         ageString = [defaults objectForKey:@"age"];
     else
-        ageString = [NSString stringWithString:@"30"];
+        ageString = @"30";
     
     return ageString;
 }
@@ -85,7 +85,7 @@
     if ([defaults objectForKey:@"height"])
         heightString = [defaults objectForKey:@"height"];
     else
-        heightString = [NSString stringWithString:@"176.5"];
+        heightString = @"176.5";
     
     return heightString;
 }
@@ -99,7 +99,7 @@
     if ([defaults objectForKey:@"weight"])
         weightString = [defaults objectForKey:@"weight"];
     else
-        weightString = [NSString stringWithString:@"70"];
+        weightString = @"70";
     
     return weightString;
 }
@@ -113,7 +113,7 @@
     if ([defaults objectForKey:@"systemUnits"]) 
         unitString = [defaults objectForKey:@"systemUnits"];
     else
-        unitString = [NSString stringWithString:@"imperial"];
+        unitString = @"imperial";
     
     return unitString;
 }
@@ -130,7 +130,7 @@
     }
     else 
     {
-        usageChoice = [NSString stringWithString: @"Yes"];
+        usageChoice = @"Yes";
     }
     
     return usageChoice;
