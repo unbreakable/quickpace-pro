@@ -36,6 +36,23 @@
     else return 0.0;
 }
 
+-(float) totalRunInMinutesGivenHours: (NSString *) someHours andMinutes: (NSString *) someMinutes andSeconds: (NSString *) someSeconds 
+{
+    // Define variables
+    float theHours, theMinutes, theSeconds, totalRunMinutes;
+    
+    // Set initial values
+    theHours = [someHours floatValue];
+    theMinutes = [someMinutes floatValue];
+    theSeconds = [someSeconds floatValue];
+    
+    // Calculate
+    totalRunMinutes = (theHours * 60) + theMinutes + (theSeconds / 60);
+    
+    NSLog(@"Total run minutes were %f", totalRunMinutes);
+    return totalRunMinutes;
+}
+
 -(NSString *) calculateSpeedGivenHours: (NSString *) someHours andMinutes: (NSString *) someMinutes andSeconds: (NSString *) someSeconds andDistance: (NSString *) someDistance;
 {
     // Define variables

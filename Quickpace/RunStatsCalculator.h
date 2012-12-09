@@ -19,8 +19,10 @@
                      andDistance: (float) theDistance;
 -(float) paceSecondsGivenMinutes: (float) theMinutes 
                      andDistance: (float) theDistance;
-
--(NSString *) calculateSpeedGivenHours: (NSString *) someHours 
+-(float) totalRunInMinutesGivenHours: (NSString *) someHours
+                          andMinutes: (NSString *) someMinutes
+                          andSeconds: (NSString *) someSeconds;
+-(NSString *) calculateSpeedGivenHours: (NSString *) someHours
                             andMinutes: (NSString *) someMinutes 
                             andSeconds: (NSString *) someSeconds 
                            andDistance: (NSString *) someDistance;
@@ -32,5 +34,5 @@
                                andMinutes: (NSString *) someMinutes 
                                andSeconds: (NSString *) someSeconds 
                               andDistance: (NSString *) someDistance;
- 
+
 @end

@@ -102,9 +102,9 @@
     
     // Usage info (flurry)
     SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
-    NSString *userRunTime = [NSString stringWithFormat:@"Run time %@:%@:%@",hoursEntry.text, minutesEntry.text, secondsEntry.text];
+    float totalRunTimeInMinutes = [theRunStats totalRunInMinutesGivenHours:hoursEntry.text andMinutes:minutesEntry.text andSeconds:secondsEntry.text];
     NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:
-                               userRunTime, @"runTime", 
+                               [NSNumber numberWithFloat:totalRunTimeInMinutes], @"runInMinutes",
                                paceDisplayText.text, @"pace", 
                                speedDisplay.text, @"speed", 
                                calorieDisplay.text, @"calories",

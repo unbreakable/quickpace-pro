@@ -39,8 +39,8 @@
     // Configure the title, title bar, and table view.
 	self.title = @"Run Details";
     //self.title.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.tableView.allowsSelectionDuringEditing = YES;
+    //self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	//self.tableView.allowsSelectionDuringEditing = YES;
     
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Treadmill-worn-640-2.png"]];
     
