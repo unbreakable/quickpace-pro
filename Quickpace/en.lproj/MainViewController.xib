@@ -41,16 +41,17 @@
 					<object class="IBUIImageView" id="932174283">
 						<reference key="NSNextResponder" ref="883825266"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{320, 460}</string>
+						<string key="NSFrameSize">{320, 641}</string>
 						<reference key="NSSuperview" ref="883825266"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="89587690"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
+						<int key="IBUIContentMode">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Treadmill-worn-640-2.png</string>
+							<string key="NSResourceName">qp-pro-main-bg.png</string>
 						</object>
 					</object>
 					<object class="IBUIImageView" id="334298675">
@@ -665,6 +666,21 @@
 						<reference key="IBUIFontDescription" ref="981988793"/>
 						<reference key="IBUIFont" ref="425541055"/>
 					</object>
+					<object class="IBUIImageView" id="934999450">
+						<reference key="NSNextResponder" ref="883825266"/>
+						<int key="NSvFlags">268</int>
+						<string key="NSFrame">{{20, 343}, {181, 54}}</string>
+						<reference key="NSSuperview" ref="883825266"/>
+						<reference key="NSWindow"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">1</int>
+						<bool key="IBUIUserInteractionEnabled">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<object class="NSCustomResource" key="IBUIImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">qp-name.png</string>
+						</object>
+					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 411}}</string>
 				<reference key="NSSuperview"/>
@@ -896,8 +912,9 @@
 							<reference ref="91376016"/>
 							<reference ref="259312541"/>
 							<reference ref="506001433"/>
-							<reference ref="932174283"/>
 							<reference ref="553971888"/>
+							<reference ref="932174283"/>
+							<reference ref="934999450"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1006,6 +1023,11 @@
 						<reference key="object" ref="932174283"/>
 						<reference key="parent" ref="883825266"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">99</int>
+						<reference key="object" ref="934999450"/>
+						<reference key="parent" ref="883825266"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -1075,12 +1097,13 @@
 				<reference key="59.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="59.showNotes"/>
 				<string key="96.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="99.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">96</int>
+			<int key="maxID">99</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1175,7 +1198,8 @@
 			<string key="FirstTimeSettingsMessage.png">{291, 233}</string>
 			<string key="SettingsGear.png">{108, 72}</string>
 			<string key="SettingsGearGlowing.png">{108, 72}</string>
-			<string key="Treadmill-worn-640-2.png">{640, 960}</string>
+			<string key="qp-name.png">{480, 125}</string>
+			<string key="qp-pro-main-bg.png">{640, 1280}</string>
 			<string key="quickpace gold button down.png">{294, 112}</string>
 			<string key="quickpace gold button up.png">{294, 112}</string>
 			<string key="result-box-dark-inner-glow.png">{326, 184}</string>

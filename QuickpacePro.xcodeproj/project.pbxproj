@@ -18,6 +18,11 @@
 		816B9691148D64910021D539 /* RunDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816B968E148D64910021D539 /* RunDetailViewController.m */; };
 		816B9692148D64910021D539 /* RunDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816B968F148D64910021D539 /* RunDetailViewController.xib */; };
 		816B9693148D64910021D539 /* RunDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816B968F148D64910021D539 /* RunDetailViewController.xib */; };
+		8172885716756E700018C07C /* qp-pro-main-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8172885616756E700018C07C /* qp-pro-main-bg.png */; };
+		817288591675709E0018C07C /* qp-name.png in Resources */ = {isa = PBXBuildFile; fileRef = 817288581675709E0018C07C /* qp-name.png */; };
+		8172887C1675A36B0018C07C /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 817288791675A36B0018C07C /* iRate.bundle */; };
+		8172887D1675A36B0018C07C /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8172887B1675A36B0018C07C /* iRate.m */; };
+		817288801675A40E0018C07C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8172887F1675A40E0018C07C /* StoreKit.framework */; };
 		8188C41C1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
 		8188C41D1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
 		8188C41E1487E5B4008E6A30 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */; };
@@ -26,8 +31,6 @@
 		8188C44D14896D6E008E6A30 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C44B14896D6E008E6A30 /* Run.m */; };
 		81AE4F6C166A941700069658 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE4F6B166A941700069658 /* libFlurry.a */; };
 		81AE4F78166A9FD600069658 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE4F77166A9FD600069658 /* SystemConfiguration.framework */; };
-		81BB52771492C0A70023BDF3 /* test320.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BB52761492C0A70023BDF3 /* test320.png */; };
-		81BB527B14931DD60023BDF3 /* Treadmill-worn-640.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BB527A14931DD60023BDF3 /* Treadmill-worn-640.png */; };
 		81BB527D14943B2C0023BDF3 /* Treadmill-worn-640-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BB527C14943B2C0023BDF3 /* Treadmill-worn-640-2.png */; };
 		81BB527F14943D9B0023BDF3 /* result-box-dark-inner-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */; };
 		81BB5283149450260023BDF3 /* Treadmill-worn-640-2-flip.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BB5282149450260023BDF3 /* Treadmill-worn-640-2-flip.png */; };
@@ -93,6 +96,12 @@
 		816B968D148D64910021D539 /* RunDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailViewController.h; sourceTree = "<group>"; };
 		816B968E148D64910021D539 /* RunDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailViewController.m; sourceTree = "<group>"; };
 		816B968F148D64910021D539 /* RunDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RunDetailViewController.xib; sourceTree = "<group>"; };
+		8172885616756E700018C07C /* qp-pro-main-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qp-pro-main-bg.png"; path = "../qp-pro-main-bg.png"; sourceTree = "<group>"; };
+		817288581675709E0018C07C /* qp-name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qp-name.png"; path = "../qp-name.png"; sourceTree = "<group>"; };
+		817288791675A36B0018C07C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
+		8172887A1675A36B0018C07C /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		8172887B1675A36B0018C07C /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
+		8172887F1675A40E0018C07C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8188C4191487E5B4008E6A30 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		8188C41A1487E5B4008E6A30 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
@@ -101,8 +110,6 @@
 		81AE4F6A166A941700069658 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		81AE4F6B166A941700069658 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		81AE4F77166A9FD600069658 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		81BB52761492C0A70023BDF3 /* test320.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test320.png; path = ../test320.png; sourceTree = "<group>"; };
-		81BB527A14931DD60023BDF3 /* Treadmill-worn-640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Treadmill-worn-640.png"; sourceTree = "<group>"; };
 		81BB527C14943B2C0023BDF3 /* Treadmill-worn-640-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Treadmill-worn-640-2.png"; sourceTree = "<group>"; };
 		81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "result-box-dark-inner-glow.png"; path = "../result-box-dark-inner-glow.png"; sourceTree = "<group>"; };
 		81BB5282149450260023BDF3 /* Treadmill-worn-640-2-flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Treadmill-worn-640-2-flip.png"; path = "../../Treadmill-worn-640-2-flip.png"; sourceTree = "<group>"; };
@@ -156,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817288801675A40E0018C07C /* StoreKit.framework in Frameworks */,
 				81AE4F78166A9FD600069658 /* SystemConfiguration.framework in Frameworks */,
 				81D4DA7A1468B72A00BA965E /* UIKit.framework in Frameworks */,
 				81D4DA7C1468B72A00BA965E /* Foundation.framework in Frameworks */,
@@ -179,6 +187,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		817288781675A36B0018C07C /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				817288791675A36B0018C07C /* iRate.bundle */,
+				8172887A1675A36B0018C07C /* iRate.h */,
+				8172887B1675A36B0018C07C /* iRate.m */,
+			);
+			path = iRate;
+			sourceTree = "<group>";
+		};
 		8188C4211487E5C6008E6A30 /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +228,7 @@
 				81D4DAA91468B72A00BA965E /* QuickpaceTests */,
 				81D4DAC31468BC9300BA965E /* QuickpaceImages */,
 				81AE4F69166A941700069658 /* Flurry */,
+				817288781675A36B0018C07C /* iRate */,
 				81D4DA781468B72A00BA965E /* Frameworks */,
 				81D4DA761468B72A00BA965E /* Products */,
 			);
@@ -228,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				81AE4F77166A9FD600069658 /* SystemConfiguration.framework */,
+				8172887F1675A40E0018C07C /* StoreKit.framework */,
 				81D4DA791468B72A00BA965E /* UIKit.framework */,
 				81D4DA7B1468B72A00BA965E /* Foundation.framework */,
 				81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */,
@@ -299,9 +319,9 @@
 		81D4DAC31468BC9300BA965E /* QuickpaceImages */ = {
 			isa = PBXGroup;
 			children = (
-				81BB52761492C0A70023BDF3 /* test320.png */,
+				817288581675709E0018C07C /* qp-name.png */,
+				8172885616756E700018C07C /* qp-pro-main-bg.png */,
 				81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */,
-				81BB527A14931DD60023BDF3 /* Treadmill-worn-640.png */,
 				81BB527C14943B2C0023BDF3 /* Treadmill-worn-640-2.png */,
 				81BB5282149450260023BDF3 /* Treadmill-worn-640-2-flip.png */,
 				816B9686148C804A0021D539 /* Calculator-icon.png */,
@@ -414,14 +434,15 @@
 				816B9688148C804A0021D539 /* Calculator-icon.png in Resources */,
 				816B9689148C804A0021D539 /* Calculator-icon@2x.png in Resources */,
 				816B9692148D64910021D539 /* RunDetailViewController.xib in Resources */,
-				81BB52771492C0A70023BDF3 /* test320.png in Resources */,
-				81BB527B14931DD60023BDF3 /* Treadmill-worn-640.png in Resources */,
 				81BB527D14943B2C0023BDF3 /* Treadmill-worn-640-2.png in Resources */,
 				81BB527F14943D9B0023BDF3 /* result-box-dark-inner-glow.png in Resources */,
 				81BB5283149450260023BDF3 /* Treadmill-worn-640-2-flip.png in Resources */,
 				816AE362166C3BCF004909E8 /* icon.png in Resources */,
 				816AE363166C3BCF004909E8 /* icon@2x.png in Resources */,
 				815BD116167557A0006CF7BE /* Default-568h@2x.png in Resources */,
+				8172885716756E700018C07C /* qp-pro-main-bg.png in Resources */,
+				817288591675709E0018C07C /* qp-name.png in Resources */,
+				8172887C1675A36B0018C07C /* iRate.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +491,7 @@
 				8188C41C1487E5B4008E6A30 /* HistoryViewController.m in Sources */,
 				8188C44C14896D6E008E6A30 /* Run.m in Sources */,
 				816B9690148D64910021D539 /* RunDetailViewController.m in Sources */,
+				8172887D1675A36B0018C07C /* iRate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

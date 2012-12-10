@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "HistoryViewController.h"
 #import "Flurry.h"
+#import "iRate.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,13 @@
 @synthesize managedObjectModel = __managedObjectModel;
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize mainViewController = _mainViewController;
+
++ (void)initialize
+{
+    //configure iRate
+    [iRate sharedInstance].daysUntilPrompt = 10;
+    [iRate sharedInstance].usesUntilPrompt = 12;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
