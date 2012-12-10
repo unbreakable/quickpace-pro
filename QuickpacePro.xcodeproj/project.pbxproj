@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
+		815BD116167557A0006CF7BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815BD115167557A0006CF7BE /* Default-568h@2x.png */; };
 		816AE362166C3BCF004909E8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 816AE360166C3BCF004909E8 /* icon.png */; };
 		816AE363166C3BCF004909E8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 816AE361166C3BCF004909E8 /* icon@2x.png */; };
 		816B9685148AD4370021D539 /* Quickpace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8D1468B72A00BA965E /* Quickpace.xcdatamodeld */; };
@@ -70,7 +71,6 @@
 		81D4DAF21468BFD600BA965E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8B1468B72A00BA965E /* AppDelegate.m */; };
 		81D4DAF31468BFD600BA965E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA911468B72A00BA965E /* MainViewController.m */; };
 		81D4DAF41468BFD600BA965E /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA941468B72A00BA965E /* FlipsideViewController.m */; };
-		81FE1287166C2D34007B9B0E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81FE1286166C2D34007B9B0E /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +85,7 @@
 
 /* Begin PBXFileReference section */
 		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
+		815BD115167557A0006CF7BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../QuickpaceImages/Default-568h@2x.png"; sourceTree = "<group>"; };
 		816AE360166C3BCF004909E8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../../QuickpaceImages/icon.png; sourceTree = "<group>"; };
 		816AE361166C3BCF004909E8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../../QuickpaceImages/icon@2x.png"; sourceTree = "<group>"; };
 		816B9686148C804A0021D539 /* Calculator-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Calculator-icon.png"; path = "../Calculator-icon.png"; sourceTree = "<group>"; };
@@ -107,7 +108,7 @@
 		81BB5282149450260023BDF3 /* Treadmill-worn-640-2-flip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Treadmill-worn-640-2-flip.png"; path = "../../Treadmill-worn-640-2-flip.png"; sourceTree = "<group>"; };
 		81D2795A146919C10024D13A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../QuickpaceImages/Default.png; sourceTree = "<group>"; };
 		81D2795B146919C10024D13A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../QuickpaceImages/Default@2x.png"; sourceTree = "<group>"; };
-		81D4DA751468B72A00BA965E /* Quickpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quickpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81D4DA751468B72A00BA965E /* QuickpacePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickpacePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D4DA791468B72A00BA965E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81D4DA7B1468B72A00BA965E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -148,7 +149,6 @@
 		81D4DAE71468BFB800BA965E /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		81D4DAE81468BFB800BA965E /* UnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitConverter.h; sourceTree = "<group>"; };
 		81D4DAE91468BFB800BA965E /* UnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitConverter.m; sourceTree = "<group>"; };
-		81FE1286166C2D34007B9B0E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../Quickpace lite 1.2/QuickpaceImages/Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,7 +218,7 @@
 		81D4DA761468B72A00BA965E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81D4DA751468B72A00BA965E /* Quickpace.app */,
+				81D4DA751468B72A00BA965E /* QuickpacePro.app */,
 				81D4DAA11468B72A00BA965E /* QuickpaceTests.octest */,
 			);
 			name = Products;
@@ -308,7 +308,7 @@
 				816B9687148C804A0021D539 /* Calculator-icon@2x.png */,
 				81D2795A146919C10024D13A /* Default.png */,
 				81D2795B146919C10024D13A /* Default@2x.png */,
-				81FE1286166C2D34007B9B0E /* Default-568h@2x.png */,
+				815BD115167557A0006CF7BE /* Default-568h@2x.png */,
 				816AE360166C3BCF004909E8 /* icon.png */,
 				816AE361166C3BCF004909E8 /* icon@2x.png */,
 				81D4DAC71468BC9300BA965E /* icon-72.png */,
@@ -342,7 +342,7 @@
 			);
 			name = Quickpace;
 			productName = Quickpace;
-			productReference = 81D4DA751468B72A00BA965E /* Quickpace.app */;
+			productReference = 81D4DA751468B72A00BA965E /* QuickpacePro.app */;
 			productType = "com.apple.product-type.application";
 		};
 		81D4DAA01468B72A00BA965E /* QuickpaceTests */ = {
@@ -372,7 +372,7 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 			};
-			buildConfigurationList = 81D4DA6F1468B72A00BA965E /* Build configuration list for PBXProject "Quickpace" */;
+			buildConfigurationList = 81D4DA6F1468B72A00BA965E /* Build configuration list for PBXProject "QuickpacePro" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -419,9 +419,9 @@
 				81BB527D14943B2C0023BDF3 /* Treadmill-worn-640-2.png in Resources */,
 				81BB527F14943D9B0023BDF3 /* result-box-dark-inner-glow.png in Resources */,
 				81BB5283149450260023BDF3 /* Treadmill-worn-640-2-flip.png in Resources */,
-				81FE1287166C2D34007B9B0E /* Default-568h@2x.png in Resources */,
 				816AE362166C3BCF004909E8 /* icon.png in Resources */,
 				816AE363166C3BCF004909E8 /* icon@2x.png in Resources */,
+				815BD116167557A0006CF7BE /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +573,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/Flurry\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QuickpacePro;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -583,7 +583,7 @@
 		81D2796814699EAF0024D13A /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quickpace.app/Quickpace";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuickpacePro.app/QuickpacePro";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -664,7 +664,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/Flurry\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QuickpacePro;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -682,7 +682,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/Quickpace/Flurry\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = QuickpacePro;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -691,7 +691,7 @@
 		81D4DAB81468B72A00BA965E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quickpace.app/Quickpace";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuickpacePro.app/QuickpacePro";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -715,7 +715,7 @@
 		81D4DAB91468B72A00BA965E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Quickpace.app/Quickpace";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuickpacePro.app/QuickpacePro";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -744,7 +744,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81D4DA6F1468B72A00BA965E /* Build configuration list for PBXProject "Quickpace" */ = {
+		81D4DA6F1468B72A00BA965E /* Build configuration list for PBXProject "QuickpacePro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81D4DAB21468B72A00BA965E /* Debug */,
