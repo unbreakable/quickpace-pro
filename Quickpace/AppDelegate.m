@@ -25,7 +25,7 @@
 {
     //configure iRate
     [iRate sharedInstance].daysUntilPrompt = 10;
-    [iRate sharedInstance].usesUntilPrompt = 12;
+    [iRate sharedInstance].usesUntilPrompt = 10;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

@@ -45,15 +45,16 @@
 					<object class="IBUIImageView" id="285480035">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrameSize">{320, 460}</string>
+						<string key="NSFrameSize">{320, 568}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<reference key="NSNextKeyView" ref="888117564"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
+						<int key="IBUIContentMode">2</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">Treadmill-worn-640-2-flip.png</string>
+							<string key="NSResourceName">Treadmill-flip-1136.png</string>
 						</object>
 					</object>
 					<object class="IBUITextField" id="1055308396">
@@ -5168,10 +5169,10 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 							<reference ref="136305202"/>
 							<reference ref="1055308396"/>
 							<reference ref="868890450"/>
-							<reference ref="285480035"/>
 							<reference ref="888117564"/>
 							<reference ref="119335858"/>
 							<reference ref="1010473279"/>
+							<reference ref="285480035"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -5342,8 +5343,8 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">Treadmill-worn-640-2-flip.png</string>
-			<string key="NS.object.0">{640, 960}</string>
+			<string key="NS.key.0">Treadmill-flip-1136.png</string>
+			<string key="NS.object.0">{640, 1136}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">1930</string>
 	</data>

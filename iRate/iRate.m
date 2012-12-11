@@ -219,7 +219,7 @@ static NSString *const iRateMacAppStoreURLFormat = @"macappstore://itunes.apple.
     NSString *message = _message;
     if (!message)
     {
-        message = (self.appStoreGenreID == iRateAppStoreGameGenreID)? [self localizedStringForKey:iRateGameMessageKey withDefault:@"If you enjoy playing %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!"]: [self localizedStringForKey:iRateAppMessageKey withDefault:@"If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!"];
+       message = (self.appStoreGenreID == iRateAppStoreGameGenreID)? [self localizedStringForKey:iRateGameMessageKey withDefault:@"Like this app? Rate it! It only takes 30 seconds."]: [self localizedStringForKey:iRateAppMessageKey withDefault:@"Enjoy using %@? Rate it! It only takes 30 seconds."];
     }
     return [message stringByReplacingOccurrencesOfString:@"%@" withString:self.applicationName];
 }
