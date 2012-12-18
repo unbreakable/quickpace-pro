@@ -195,8 +195,6 @@
     
     }
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
     // A date formatter for the run date.
     static NSDateFormatter *dateFormatter = nil;
 	if (dateFormatter == nil) {
@@ -212,7 +210,7 @@
 	
 	NSString *string = [NSString stringWithFormat:@"On %@",[dateFormatter stringFromDate:[run date]]];
     cell.detailTextLabel.text = string;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
     return cell;
 }
