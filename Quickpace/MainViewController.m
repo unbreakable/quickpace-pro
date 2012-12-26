@@ -17,7 +17,7 @@
 @implementation MainViewController
 
 @synthesize managedObjectContext = _managedObjectContext;
-@synthesize distanceEntry, hoursEntry, minutesEntry, secondsEntry, paceDisplayText, speedDisplay, calorieDisplay, enterYourSettingsText, enterYourSettingsCallout;
+@synthesize distanceEntry, hoursEntry, minutesEntry, secondsEntry, inclineEntry, paceDisplayText, speedDisplay, calorieDisplay, enterYourSettingsText, enterYourSettingsCallout;
 
 - (void)didReceiveMemoryWarning
 {
@@ -68,6 +68,7 @@
     minutesEntry.text = @"";    
     secondsEntry.text = @"";
     distanceEntry.text = @"";
+    inclineEntry.text = @"";
     [self resetDisplayLabels];
     [hoursEntry becomeFirstResponder];
     
@@ -91,10 +92,11 @@
     calorieDisplay.text = [theRunStats calculateCaloriesUsingHours:hoursEntry.text 
                                                         andMinutes:minutesEntry.text
                                                         andSeconds:secondsEntry.text
-                                                       andDistance:distanceEntry.text];    
+                                                       andDistance:distanceEntry.text
+                                                        andIncline:inclineEntry.text];
     
     // Save run to database
-    [self saveRunWithPace:paceDisplayText.text andHours:hoursEntry.text andMinutes:minutesEntry.text andSeconds:secondsEntry.text andDistance:distanceEntry.text andSpeed:speedDisplay.text andCalories:calorieDisplay.text];
+    [self saveRunWithPace:paceDisplayText.text andHours:hoursEntry.text andMinutes:minutesEntry.text andSeconds:secondsEntry.text andDistance:distanceEntry.text andSpeed:speedDisplay.text andCalories:calorieDisplay.text andIncline:inclineEntry.text];
     
     // These are just here to dismiss the keyboard
     [distanceEntry becomeFirstResponder];
@@ -108,6 +110,7 @@
                                paceDisplayText.text, @"pace", 
                                speedDisplay.text, @"speed", 
                                calorieDisplay.text, @"calories",
+                               inclineEntry.text, @"incline",
                                [userSettings getAgeDefault], @"age",
                                [userSettings getSexDefault], @"sex",
                                [userSettings getHeightDefault], @"height", 
@@ -123,7 +126,8 @@
              andSeconds: (NSString *)theSec
             andDistance: (NSString *)aDistance
                andSpeed: (NSString *)aSpeed
-            andCalories: (NSString *)theCalories;
+            andCalories: (NSString *)theCalories
+             andIncline: (NSString *)theIncline;
 {
     NSDate *aDate = [NSDate date];
     NSString *distanceUnits;
@@ -158,6 +162,7 @@
     [theRun setValue:theSec       forKey:@"durationSec"];
     [theRun setValue:aSpeed       forKey:@"speed"];
     [theRun setValue:theCalories  forKey:@"calories"];
+    [theRun setValue:theIncline   forKey:@"incline"];
     
     
     NSError *error;

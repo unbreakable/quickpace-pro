@@ -30,9 +30,10 @@
                             andMinutes: (NSString *) someMinutes 
                             andSeconds: (NSString *) someSeconds 
                            andDistance: (NSString *) someDistance;
--(NSString *) calculateCaloriesUsingHours: (NSString *) someHours 
-                               andMinutes: (NSString *) someMinutes 
-                               andSeconds: (NSString *) someSeconds 
-                              andDistance: (NSString *) someDistance;
+-(NSString *) calculateCaloriesUsingHours: (NSString *) someHours
+                               andMinutes: (NSString *) someMinutes
+                               andSeconds: (NSString *) someSeconds
+                              andDistance: (NSString *) someDistance
+                               andIncline: (NSString *) someIncline;
 
 @end

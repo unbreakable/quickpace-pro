@@ -88,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8115E45E16880EF10014E756 /* Quickpace 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Quickpace 2.xcdatamodel"; sourceTree = "<group>"; };
 		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
 		815BD115167557A0006CF7BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../QuickpaceImages/Default-568h@2x.png"; sourceTree = "<group>"; };
 		816B968D148D64910021D539 /* RunDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailViewController.h; sourceTree = "<group>"; };
@@ -591,7 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
@@ -686,7 +687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
@@ -706,7 +707,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
@@ -814,9 +815,10 @@
 		81D4DA8D1468B72A00BA965E /* Quickpace.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8115E45E16880EF10014E756 /* Quickpace 2.xcdatamodel */,
 				81D4DA8E1468B72A00BA965E /* Quickpace.xcdatamodel */,
 			);
-			currentVersion = 81D4DA8E1468B72A00BA965E /* Quickpace.xcdatamodel */;
+			currentVersion = 8115E45E16880EF10014E756 /* Quickpace 2.xcdatamodel */;
 			path = Quickpace.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

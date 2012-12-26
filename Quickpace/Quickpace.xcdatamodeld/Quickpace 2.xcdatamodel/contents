@@ -7,10 +7,11 @@
         <attribute name="durationHrs" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="durationMin" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="durationSec" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="incline" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pace" attributeType="String" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Run" positionX="1546" positionY="-1575" width="128" height="165"/>
+        <element name="Run" positionX="1546" positionY="-1575" width="128" height="180"/>
     </elements>
 </model>

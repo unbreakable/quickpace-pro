@@ -9,22 +9,7 @@
 #import <CoreData/CoreData.h>
 #import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate>
-{
-    // Results display fields
-    UITextField     *paceDisplayText;
-    UITextField     *speedDisplay;
-    UITextField     *calorieDisplay;
-    
-    // Data entry values
-    UITextField     *hoursEntry;
-    UITextField     *minutesEntry;
-    UITextField     *secondsEntry;
-    UITextField     *distanceEntry;
-    
-    // Welcome to app text
-    UILabel         *enterYourSettingsText;
-    UIImageView     *enterYourSettingsCallout;
+@interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
 }
 
 @property (nonatomic, retain) IBOutlet UITextField            *paceDisplayText;
@@ -34,6 +19,7 @@
 @property (nonatomic, retain) IBOutlet UITextField            *hoursEntry;
 @property (nonatomic, retain) IBOutlet UITextField            *minutesEntry;
 @property (nonatomic, retain) IBOutlet UITextField            *secondsEntry;
+@property (strong, nonatomic) IBOutlet UITextField            *inclineEntry;
 @property (nonatomic, retain) IBOutlet UILabel                *enterYourSettingsText;
 @property (nonatomic, retain) IBOutlet UIImageView            *enterYourSettingsCallout;
 @property (strong, nonatomic)          NSManagedObjectContext *managedObjectContext;
@@ -51,6 +37,7 @@
                   andSeconds: (NSString *)theSec
                  andDistance: (NSString *)aDistance
                     andSpeed: (NSString *)aSpeed
-                 andCalories: (NSString *)theCalories;
+                 andCalories: (NSString *)theCalories
+                  andIncline: (NSString *)theIncline;
 
 @end

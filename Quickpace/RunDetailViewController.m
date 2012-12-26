@@ -117,7 +117,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -185,6 +185,16 @@
         case 5:
 			cell.textLabel.text = @"Calories";
 			cell.detailTextLabel.text = run.calories;
+			break;
+        case 6:
+            // Check to see if string is == @"" or NULL (from the older non-incline version) and if so, make it @"0.0%", otherwise show the value with the % sign
+			cell.textLabel.text = @"Incline";
+            NSString *runIncline;
+            if ([run.incline isEqualToString:@""] || run.incline == NULL)
+                runIncline = @"0.0";
+            else
+                runIncline = run.incline;
+			cell.detailTextLabel.text = [NSString stringWithFormat:@"%@%%", runIncline];
 			break;
     }
     return cell;

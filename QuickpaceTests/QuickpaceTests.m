@@ -95,7 +95,7 @@
 {
     [self resetToDefaultSettings];
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
-    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"0" andSeconds:@"0" andDistance:@"0"];
+    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"0" andSeconds:@"0" andDistance:@"0" andIncline:@"0"];
     NSString *expected = @"0.0 calories";
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
@@ -129,7 +129,7 @@
 {
     [self resetToDefaultSettings];
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
-    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"10" andSeconds:@"0" andDistance:@"1"];
+    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"10" andSeconds:@"0" andDistance:@"1" andIncline:@"0"];
     NSString *expected = @"124.3 calories";
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
@@ -142,7 +142,7 @@
     
     [userSettings saveSexSetting:1];
     
-    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"23" andSeconds:@"0" andDistance:@"2"];
+    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"23" andSeconds:@"0" andDistance:@"2" andIncline:@"0"];
     NSString *expected = @"285.1 calories";
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
@@ -152,7 +152,7 @@
     [self resetToDefaultSettings];
     // Testing 1.33 mph
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
-    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"45" andSeconds:@"0" andDistance:@"1"];
+    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"45" andSeconds:@"0" andDistance:@"1" andIncline:@"0"];
     NSString *expected = @"108.0 calories";
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
@@ -162,7 +162,7 @@
     [self resetToDefaultSettings];
     // Testing 2.40 mph
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
-    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"25" andSeconds:@"0" andDistance:@"1"];
+    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"25" andSeconds:@"0" andDistance:@"1" andIncline:@"0"];
     NSString *expected = @"97.6 calories";
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
@@ -172,7 +172,7 @@
     [self resetToDefaultSettings];
     // Testing 3.16 mph
     RunStatsCalculator *runCalculator = [[RunStatsCalculator alloc] init];
-    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"19" andSeconds:@"0" andDistance:@"1"];
+    NSString *result = [runCalculator calculateCaloriesUsingHours:@"0" andMinutes:@"19" andSeconds:@"0" andDistance:@"1" andIncline:@"0"];
     NSString *expected = @"93.1 calories";
     STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
 }
@@ -192,7 +192,7 @@
     NSString *seconds = @"0";
     NSString *distance = @"10";
     
-    NSString *calResult = [runCalculator calculateCaloriesUsingHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
+    NSString *calResult = [runCalculator calculateCaloriesUsingHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance andIncline:@"0"];
     
     NSString *expectedCal = @"1103.3 kilocalories";
     STAssertEqualObjects (expectedCal, calResult, @"Did not compute calories correctly, expecting %@, got %@", expectedCal, calResult);
@@ -221,7 +221,7 @@
     NSString *seconds = @"0";
     NSString *distance = @"0";
     
-    NSString *calResult = [runCalculator calculateCaloriesUsingHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];
+    NSString *calResult = [runCalculator calculateCaloriesUsingHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance andIncline:@"0"];
     
     NSString *expectedCal = @"0.0 kilocalories";
     STAssertEqualObjects (expectedCal, calResult, @"Did not compute calories correctly, expecting %@, got %@", expectedCal, calResult);

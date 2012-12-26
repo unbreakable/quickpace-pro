@@ -20,5 +20,6 @@
 @property (nonatomic, retain) NSString * durationHrs;
 @property (nonatomic, retain) NSString * durationMin;
 @property (nonatomic, retain) NSString * durationSec;
+@property (nonatomic, retain) NSString * incline;
 
 @end

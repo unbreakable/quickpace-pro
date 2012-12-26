@@ -19,5 +19,6 @@
 @dynamic durationHrs;
 @dynamic durationMin;
 @dynamic durationSec;
+@dynamic incline;
 
 @end
