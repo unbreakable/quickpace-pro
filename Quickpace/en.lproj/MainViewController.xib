@@ -740,6 +740,7 @@
 							<int key="IBUIKeyboardType">8</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
+						<int key="IBUIClearButtonMode">1</int>
 						<reference key="IBUIFontDescription" ref="981988793"/>
 						<reference key="IBUIFont" ref="425541055"/>
 					</object>
@@ -981,10 +982,10 @@
 							<reference ref="486658355"/>
 							<reference ref="608585259"/>
 							<reference ref="677518074"/>
-							<reference ref="922465194"/>
 							<reference ref="880664626"/>
 							<reference ref="292241081"/>
 							<reference ref="1037241328"/>
+							<reference ref="922465194"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

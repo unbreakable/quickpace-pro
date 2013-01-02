@@ -132,6 +132,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.accessibilityLabel = @"HistorySummaryTable"; // accessibility label for ui automation testing
 }
 
 - (void)viewDidUnload
@@ -144,7 +146,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self loadHistory];
-    NSLog(@"View will appear was called");
     [self.tableView reloadData];
     
     [super viewWillAppear:animated];
@@ -211,6 +212,7 @@
 	NSString *string = [NSString stringWithFormat:@"On %@",[dateFormatter stringFromDate:[run date]]];
     cell.detailTextLabel.text = string;
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessibilityLabel = [NSString stringWithFormat:@"%@ at %@", [run distance], [run pace]];
     
     return cell;
 }

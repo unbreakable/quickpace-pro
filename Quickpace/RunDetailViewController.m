@@ -57,6 +57,8 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.accessibilityLabel = @"HistoryDetails"; // accessibility label for ui automation testing
 }
 
 - (void)viewDidUnload
@@ -144,16 +146,19 @@
 	switch (indexPath.row) {
         case 0: 
 			cell.textLabel.text = @"Date";
+            cell.accessibilityLabel = @"Date";
 			cell.detailTextLabel.text = dateString;
 			break;
         case 1: 
 			cell.textLabel.text = @"Distance";
+            cell.accessibilityLabel = @"Distance";
 			cell.detailTextLabel.text = run.distance;
-			break;
+            break;
         case 2:
         {
             // Actually, just check to see if string is == @"" and if so, make it @"00"
 			cell.textLabel.text = @"Time";
+            cell.accessibilityLabel = @"Time";
             NSString *runHrs, *runMin, *runSec;
             
             if ([run.durationHrs isEqualToString:@""]) 
@@ -176,19 +181,23 @@
 			break;
         case 3:
 			cell.textLabel.text = @"Pace";
-			cell.detailTextLabel.text = run.pace;
+            cell.accessibilityLabel = @"Pace";
+            cell.detailTextLabel.text = run.pace;
 			break;
         case 4:
 			cell.textLabel.text = @"Speed";
+            cell.accessibilityLabel = @"Speed";
 			cell.detailTextLabel.text = run.speed;
 			break;
         case 5:
 			cell.textLabel.text = @"Calories";
+            cell.accessibilityLabel = @"Calories";
 			cell.detailTextLabel.text = run.calories;
 			break;
         case 6:
             // Check to see if string is == @"" or NULL (from the older non-incline version) and if so, make it @"0.0%", otherwise show the value with the % sign
 			cell.textLabel.text = @"Incline";
+            cell.accessibilityLabel = @"Incline";
             NSString *runIncline;
             if ([run.incline isEqualToString:@""] || run.incline == NULL)
                 runIncline = @"0.0";

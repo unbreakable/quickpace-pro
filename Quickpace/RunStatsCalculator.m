@@ -49,7 +49,6 @@
     // Calculate
     totalRunMinutes = (theHours * 60) + theMinutes + (theSeconds / 60);
     
-    NSLog(@"Total run minutes were %f", totalRunMinutes);
     return totalRunMinutes;
 }
 
@@ -145,7 +144,7 @@
 -(NSString *) calculateCaloriesUsingHours: (NSString *) someHours andMinutes: (NSString *) someMinutes andSeconds: (NSString *) someSeconds andDistance: (NSString *) someDistance andIncline: (NSString *) someIncline;
 {
     // Define variables
-    float theHours, theMinutes, theSeconds, theDistance, theIncline, totalRunMinutes, theSpeed, m, b, inclFactor, origMETS, correctedMETS, totalRunCalories;
+    float theHours, theMinutes, theSeconds, theDistance, theIncline, totalRunMinutes, theSpeed, m, b, inclFactor, origMETS, correctedMETs, totalRunCalories, inclineMETs, finalMETs;
     NSString *theCalorieResult;
     
     // Create constants
@@ -159,7 +158,7 @@
     float factorFourFemale  = 9.6;
     float factorFiveFemale  = 4.7;
     
-    // Set initial values
+    // Set initial values with user inputs or defaults
     SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
     NSString *userUnits = [NSString stringWithString:[userSettings getUnitsDefault]];
     NSString *userSex   = [NSString stringWithString:[userSettings getSexDefault]];
@@ -174,103 +173,111 @@
     totalRunMinutes = (theHours * 60) + theMinutes + (theSeconds / 60);
     theSpeed = theDistance / (totalRunMinutes / 60);  
     
-    // Interpolate METS value using line equations
+    // Set variables to interpolate zero incline METS value using a set of line equations
     if (theSpeed <=0) 
     {
         m = 0.00;
         b = 1.00;
-        inclFactor = 0.00;
     }
     else if (theSpeed >0 && theSpeed <=1.5) 
     {
         m = 0.67;
         b = 1.00;
-        inclFactor = 0.08;
     }
     else if (theSpeed >1.5 && theSpeed <=2) 
     {
         m = 1.60;
         b = -0.40;
-        inclFactor = 0.10;
     }
     else if (theSpeed >2 && theSpeed <=3) 
     {
         m = 0.70;
         b = 1.40;
-        inclFactor = 0.14;
     }
     else if (theSpeed >3 && theSpeed <=4) 
     {
         m = 2.30;
         b = -3.40;
-        inclFactor = 0.20;
     }
     else if (theSpeed >4 && theSpeed <=5) 
     {
         m = 2.50;
         b = -4.20;
-        inclFactor = 0.28;
     }
     else if (theSpeed >5 && theSpeed <=6) 
     {
         m = 1.50;
         b = 0.80;
-        inclFactor = 0.34;
     }
     else if (theSpeed >6 && theSpeed <=7) 
     {
         m = 1.20;
         b = 2.60;
-        inclFactor = 0.42;
     }
     else if (theSpeed >7 && theSpeed <=8) 
     {
         m = 0.80;
         b = 5.40;
-        inclFactor = 0.48;
     }
     else if (theSpeed >8 && theSpeed <=9) 
     {
         m = 1.00;
         b = 3.80;
-        inclFactor = 0.54;
     }
     else if (theSpeed >9 && theSpeed <=10) 
     {
         m = 1.70;
         b = -2.50;
-        inclFactor = 0.62;
     }
     else if (theSpeed >10 && theSpeed <=11) 
     {
         m = 1.50;
         b = -0.50;
-        inclFactor = 0.70;
     }
     else if (theSpeed >11 && theSpeed <=12) 
     {
         m = 3.00;
         b = -17.00;
-        inclFactor = 0.76;
     }
     else if (theSpeed >12 && theSpeed <=13) 
     {
         m = 0.80;
         b = 9.40;
-        inclFactor = 0.82;
     }
     else
     {
         m = 3.20;
         b = -21.80;
-        inclFactor = 0.90;
     }
     
-    origMETS = ((m * theSpeed) + b) + (inclFactor * theIncline);
+    // Calculate flat ground METs
+    origMETS = (m * theSpeed) + b;
     
-    // Improve the origMETS by correcting for age, sex, height, and weight
+    // Set the incline (aka grade) factor dependent on whether the person is probably running or walking
+    if (theSpeed <=0)
+    {
+        inclFactor = 0;
+    }
+    else if (theSpeed >0 && theSpeed <=3.5)
+    {
+        inclFactor = 1.8;
+    }
+    else
+    {
+        inclFactor = 0.9;
+    }
+    
+    // Calculate additional METs that come from the incline
+    inclineMETs = ((theIncline / 100) * (theSpeed * 26.8) * inclFactor) /  factorOne;
+    
+    // Add origMETs to inclineMETs to get finalMETs
+    finalMETs = origMETS + inclineMETs;
+    
+    // NSLog(@"finalMETs are %f adding orig of %f and incline METs of %f", finalMETs, origMETS, inclineMETs);
+    
+    // Improve the finalMETs by correcting for age, sex, height, and weight
     if ( [userSex isEqualToString:@"male"] )
-        correctedMETS = (factorOne/
+        correctedMETs = (factorOne/
                          (
                           (
                            (
@@ -281,9 +288,9 @@
                             )/aWeight
                            )*1000
                           )
-                         )*origMETS;
+                         )*finalMETs;
     else
-        correctedMETS = (factorOne/
+        correctedMETs = (factorOne/
                          (
                           (
                            (
@@ -294,9 +301,11 @@
                             )/aWeight
                            )*1000
                           )
-                         )*origMETS;
+                         )*finalMETs;
     
-    totalRunCalories = ( ( correctedMETS * aWeight * 3.5 ) / 200 ) * totalRunMinutes;
+    // NSLog(@"correctedMets are adjusted to %f at an incline of %f", correctedMETs, theIncline);
+    
+    totalRunCalories = ( ( correctedMETs * aWeight * 3.5 ) / 200 ) * totalRunMinutes;
     
     // Final result formatting
     if ( totalRunCalories <= 0 || isnan(totalRunCalories))
