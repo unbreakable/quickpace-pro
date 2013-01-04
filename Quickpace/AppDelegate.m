@@ -54,7 +54,7 @@
     // Fire up Flurry (if user permits)
     if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
     {
-        [Flurry startSession:@"SI3MMAED13G6AARE9FXM"];
+        [Flurry startSession:@"BHPZGM1XL1R9P7KAGXVY"];
         [Flurry setAge:[[userSettings getAgeDefault] intValue]];
         
         if ([[userSettings getSexDefault] isEqualToString:@"male"]) 
