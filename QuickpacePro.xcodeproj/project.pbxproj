@@ -592,7 +592,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonathan Kaufman";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
@@ -602,7 +602,7 @@
 					"\"$(SRCROOT)/Quickpace/Flurry\"",
 				);
 				PRODUCT_NAME = QuickpacePro;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D81B1532-82F7-4BAD-BDCF-DFC5B635E79B";
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -707,7 +707,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonathan Kaufman";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Quickpace/Quickpace-Prefix.pch";
 				INFOPLIST_FILE = "Quickpace/Quickpace-Info.plist";
@@ -717,7 +717,7 @@
 					"\"$(SRCROOT)/Quickpace/Flurry\"",
 				);
 				PRODUCT_NAME = QuickpacePro;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D81B1532-82F7-4BAD-BDCF-DFC5B635E79B";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
