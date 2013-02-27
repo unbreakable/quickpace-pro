@@ -11,6 +11,7 @@
 #import "SettingsManager.h"
 #import "Run.h"
 #import "RunDetailViewController.h"
+#import "Flurry.h"
 
 @implementation HistoryViewController
 
@@ -147,6 +148,9 @@
 {
     [self loadHistory];
     [self.tableView reloadData];
+    
+    [Flurry logEvent:@"User visited history summary view"];
+    NSLog(@"History summary loaded");
     
     [super viewWillAppear:animated];
 }

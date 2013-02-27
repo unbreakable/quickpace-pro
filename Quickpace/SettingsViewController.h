@@ -1,9 +1,9 @@
 //
-//  FlipsideViewController.h
-//  Quickpace
+//  SettingsViewController.h
+//  QuickpacePro
 //
-//  Created by Jonathan Kaufman on 10/26/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by JFK on 2/26/13.
+//
 //
 
 #import <UIKit/UIKit.h>
@@ -12,13 +12,7 @@
 #import "Flurry.h"
 #import "EffectsManager.h"
 
-@class FlipsideViewController;
-
-@protocol FlipsideViewControllerDelegate
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
-@end
-
-@interface FlipsideViewController : UIViewController
+@interface SettingsViewController : UIViewController
 {
     // UI elements
     UISegmentedControl *unitsPicker;
@@ -46,10 +40,6 @@
 @property (nonatomic, retain) IBOutlet UITextField        *feetEntry;
 @property (nonatomic, retain) IBOutlet UITextField        *inchEntry;
 @property (nonatomic, retain) IBOutlet UILabel            *feetInchMarkers;
-@property (nonatomic, retain) IBOutlet UIButton           *keyboardDismisser;
-@property (nonatomic, retain) IBOutlet id                 <FlipsideViewControllerDelegate> delegate;
-
-- (IBAction)done:(id)sender;
 
 // Calling and persisting defaults
 -(IBAction)   saveUnitsSetting;

@@ -1,16 +1,21 @@
 //
-//  FlipsideViewController.m
-//  Quickpace
+//  SettingsViewController.m
+//  QuickpacePro
 //
-//  Created by Jonathan Kaufman on 10/26/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by JFK on 2/26/13.
+//
 //
 
-#import "FlipsideViewController.h"
+#import "SettingsViewController.h"
+#import "Flurry.h"
 
-@implementation FlipsideViewController
+@interface SettingsViewController ()
 
-@synthesize delegate = _delegate, unitsPicker, ageEntry, metricHeightEntry, metricWeightEntry, sexPicker, keyboardDismisser, feetEntry, inchEntry, imperialWeightEntry, feetInchMarkers;
+@end
+
+@implementation SettingsViewController
+
+@synthesize unitsPicker, ageEntry, metricHeightEntry, metricWeightEntry, sexPicker, feetEntry, inchEntry, imperialWeightEntry, feetInchMarkers;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -19,7 +24,6 @@
     }
     return self;
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,7 +50,7 @@
     // Check for units and only show the applicable fields for weight and set labels for the appropriate system
     SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
     
-    if ( [[userSettings getUnitsDefault] isEqualToString:@"imperial"] ) 
+    if ( [[userSettings getUnitsDefault] isEqualToString:@"imperial"] )
     {
         metricHeightEntry.alpha = 0;
         metricWeightEntry.alpha = 0;
@@ -66,7 +70,6 @@
         feetInchMarkers.alpha = 0;
         imperialWeightEntry.alpha = 0;
     }
-    
 }
 
 - (void)viewDidUnload
@@ -78,10 +81,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [[NSNotificationCenter defaultCenter] addObserver:self 
+    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
                                                object:self.view.window];
+    
+    [Flurry logEvent:@"User visited settings view"];
+    NSLog(@"Settings view loaded");
     
 	[super viewWillAppear:animated];
 }
@@ -108,20 +114,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return ((interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) || 
+    return ((interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) ||
             (interfaceOrientation == UIInterfaceOrientationPortrait));
 }
 
 #pragma mark - Keyboard scrolling methods
 
-- (void) keyboardWillShow: (NSNotification *) notif 
+- (void) keyboardWillShow: (NSNotification *) notif
 {
 	NSDictionary *info = [notif userInfo];
 	NSValue *aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
     CGSize keyboardSize = [aValue CGRectValue].size;
     float bottomPoint = 0;
     
-    if ([ageEntry isFirstResponder]) 
+    if ([ageEntry isFirstResponder])
         bottomPoint = (ageEntry.frame.origin.y+ageEntry.frame.size.height+8);
     else if ([metricHeightEntry isFirstResponder])
         bottomPoint = (metricHeightEntry.frame.origin.y+metricHeightEntry.frame.size.height+8);
@@ -136,7 +142,7 @@
     
 	scrollAmount = keyboardSize.height - (self.view.frame.size.height - bottomPoint);
 	
-	if (scrollAmount >0) 
+	if (scrollAmount >0)
     {
 		moveViewUp = YES;
 		[self scrollTheView:YES];
@@ -145,18 +151,18 @@
 		moveViewUp = NO;
 }
 
-- (void) scrollTheView: (BOOL) movedUp 
+- (void) scrollTheView: (BOOL) movedUp
 {
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:0.3];
 	CGRect rect = self.view.frame;
-	if (movedUp) 
+	if (movedUp)
     {
 		rect.origin.y -= scrollAmount;
         self.view.frame = rect;
         [UIView commitAnimations];
-	} 
-    else 
+	}
+    else
     {
 		rect.origin.y += scrollAmount;
         self.view.frame = rect;
@@ -166,26 +172,26 @@
 }
 
 #pragma mark - Actions
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (moveViewUp) [self scrollTheView:NO];
 	
 	[super touchesBegan:touches withEvent:event];
 }
 
--(void)touchesEnded: (NSSet *)touches withEvent: (UIEvent *)event 
+-(void)touchesEnded: (NSSet *)touches withEvent: (UIEvent *)event
 {
-    for (UIView* view in self.view.subviews) 
+    for (UIView* view in self.view.subviews)
     {
         if ([view isKindOfClass:[UITextField class]])
             [view resignFirstResponder];
     }
 }
 
-// General note this method only works when the view controller is hooked up as the delegate in IB  
-- (BOOL) textFieldShouldReturn: (UITextField *) theTextField 
+// General note this method only works when the view controller is hooked up as the delegate in IB
+- (BOOL) textFieldShouldReturn: (UITextField *) theTextField
 {
-    if (theTextField == feetEntry) 
+    if (theTextField == feetEntry)
     {
         [inchEntry becomeFirstResponder];
         return NO;
@@ -209,7 +215,7 @@
     
     [userSettings saveUnitsSetting:unitsPicker.selectedSegmentIndex];
     
-	if ( [[userSettings getUnitsDefault] isEqualToString:@"imperial"] ) 
+	if ( [[userSettings getUnitsDefault] isEqualToString:@"imperial"] )
     {
         [uiEffects fadeOut: metricHeightEntry  withDuration: 0.3 andWait: 0.1];
         [uiEffects fadeOut: metricWeightEntry  withDuration: 0.3 andWait: 0.1];
@@ -231,7 +237,7 @@
         
         [Flurry logEvent:@"User picked Imperial setting"];
     }
-    else 
+    else
     {
         [uiEffects fadeOut: feetEntry           withDuration: 0.3 andWait: 0.1];
         [uiEffects fadeOut: inchEntry           withDuration: 0.3 andWait: 0.1];
@@ -298,8 +304,8 @@
     {
         // Package
         NSDictionary *imperialHeightValues = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                              feetEntry.text, @"feet", 
-                                              inchEntry.text, @"inches", 
+                                              feetEntry.text, @"feet",
+                                              inchEntry.text, @"inches",
                                               nil];
         // Convert to metric and display
         metricHeightEntry.text = [NSString stringWithString:[converter convertToCentimetersGivenFeetInches: imperialHeightValues]];
@@ -317,7 +323,7 @@
     
     if ( [[userSettings getUnitsDefault] isEqualToString:@"metric"] )
     {
-        imperialWeightEntry.text = [NSString stringWithString:[converter convertToPoundsGivenKgs:metricWeightEntry.text]];        
+        imperialWeightEntry.text = [NSString stringWithString:[converter convertToPoundsGivenKgs:metricWeightEntry.text]];
         
         NSDictionary *flurryDic = [[NSDictionary alloc] initWithObjectsAndKeys:imperialWeightEntry.text, @"userWeight", @"Imperial", @"units", nil];
         [Flurry logEvent:@"Weight chosen" withParameters:flurryDic];
@@ -364,11 +370,6 @@
         sexPicker.selectedSegmentIndex = 1;
     else
         sexPicker.selectedSegmentIndex = 0;
-}
-
-- (IBAction)done:(id)sender
-{
-    [self.delegate flipsideViewControllerDidFinish:self];
 }
 
 @end

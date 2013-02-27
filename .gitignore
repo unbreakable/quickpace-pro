@@ -29,3 +29,19 @@ Icon
 # JK additional ignores
 QuickpaceImages/
 Icon*
+
+# Stuff in the suggested .gitignore file from Facebook's iOS github page (less dups with above exclusions)
+samples/Hackbook/build/
+samples/Hackbook/Hackbook.xcodeproj/*.pbxuser
+samples/Hackbook/Hackbook.xcodeproj/*.mode*
+samples/Hackbook/Hackbook.xcodeproj/xcuserdata*
+samples/Hackbook/Hackbook.xcodeproj/project.xcworkspace
+src/facebook-ios-sdk.xcodeproj/*.pbxuser
+src/facebook-ios-sdk.xcodeproj/*.mode*
+lib/
+test/UnitTest/UnitTest.xcodeproj/*.pbxuser
+test/UnitTest/UnitTest.xcodeproj/*.mode*
+test/UnitTest/build/
+*~
+*#
+.arc

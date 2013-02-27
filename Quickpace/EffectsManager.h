@@ -14,6 +14,4 @@
 -(void)fadeIn:(UIView*)viewToFadeIn withDuration:(NSTimeInterval)duration andWait:(NSTimeInterval)wait;
 -(void)fadeOut:(UIView*)viewToDissolve withDuration:(NSTimeInterval)duration andWait:(NSTimeInterval)wait;
 
-//TEST for GIT ...THIS IS THE PRO CODE
-
 @end

@@ -8,6 +8,7 @@
 
 #import "RunDetailViewController.h"
 #import "Run.h"
+#import "Flurry.h"
 
 @implementation RunDetailViewController
 
@@ -59,6 +60,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.accessibilityLabel = @"HistoryDetails"; // accessibility label for ui automation testing
+    
 }
 
 - (void)viewDidUnload
@@ -73,6 +75,9 @@
     [super viewWillAppear:animated];
     
     [self.tableView reloadData];
+    
+    [Flurry logEvent:@"User visited history summary view"];
+    NSLog(@"History detail loaded");
 }
 
 - (void)viewDidAppear:(BOOL)animated

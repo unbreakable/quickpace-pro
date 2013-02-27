@@ -12,6 +12,7 @@
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
 }
 
+@property (nonatomic, retain) IBOutlet UIButton               *shareButton;
 @property (nonatomic, retain) IBOutlet UITextField            *paceDisplayText;
 @property (nonatomic, retain) IBOutlet UITextField            *speedDisplay;
 @property (nonatomic, retain) IBOutlet UITextField            *calorieDisplay;
@@ -28,6 +29,7 @@
 - (IBAction) calculateRun;
 - (IBAction) clearAll;
 - (IBAction) textFieldDidUpdate:(id)sender;
+- (IBAction) openUIActivityView:(id)sender;
 - (void)     resetDisplayLabels;
 - (void)     displayWelcome;
 - (void)     applicationDidBecomeActive: (NSNotification *)notification;

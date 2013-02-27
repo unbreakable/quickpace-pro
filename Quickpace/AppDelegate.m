@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "HistoryViewController.h"
+#import "SettingsViewController.h"
 #import "Flurry.h"
 #import "iRate.h"
 
@@ -37,11 +38,19 @@
     // This programmatic creation of tab bars pattern comes from the non-storyboard tab bar template in Xcode
     UIViewController *viewController1 = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     UIViewController *viewController2 = [[HistoryViewController alloc] initWithNibName:@"HistoryViewController" bundle:nil];
+    UIViewController *viewController3 = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    
 	UINavigationController *theNavigationController = [[UINavigationController alloc] initWithRootViewController:viewController2];
     viewController2.navigationItem.title=@"Run History";
     theNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
     theNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, theNavigationController, nil];
+    
+    UINavigationController *theSettingNavigationController = [[UINavigationController alloc] initWithRootViewController:viewController3];
+    viewController3.navigationItem.title=@"Settings";
+    theSettingNavigationController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"SettingsGearTab.png"] tag:3];
+    theSettingNavigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, theNavigationController, theSettingNavigationController, nil];
     self.window.rootViewController = self.mainViewController;
     
     self.mainViewController.managedObjectContext = self.managedObjectContext;
@@ -52,6 +61,8 @@
     SettingsManager *userSettings = [[SettingsManager alloc] init];
     
     // Fire up Flurry (if user permits)
+    // PLEASE UNCOMMENT THIS BEFORE DEPLOYING AND REMOVE THIS LINE TOO
+    /*
     if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
     {
         [Flurry startSession:@"BHPZGM1XL1R9P7KAGXVY"];
@@ -62,6 +73,7 @@
         else
             [Flurry setGender:@"f"];
     }
+    */
     
     // Pull version number from Info plist and put in Settings so it is visible in the Settings.app
     [userSettings saveVersion:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
