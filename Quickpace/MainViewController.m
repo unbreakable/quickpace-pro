@@ -378,7 +378,7 @@
 }
 
 #pragma mark - Flipside View
-
+/*
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
 {
     [self dismissModalViewControllerAnimated:YES];
@@ -396,5 +396,6 @@
     controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentModalViewController:controller animated:YES];
 }
+ */
 
 @end

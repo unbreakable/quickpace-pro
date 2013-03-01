@@ -7,9 +7,8 @@
 //
 
 #import <CoreData/CoreData.h>
-#import "FlipsideViewController.h"
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
+@interface MainViewController : UIViewController {
 }
 
 @property (nonatomic, retain) IBOutlet UIButton               *shareButton;
@@ -25,7 +24,7 @@
 @property (nonatomic, retain) IBOutlet UIImageView            *enterYourSettingsCallout;
 @property (strong, nonatomic)          NSManagedObjectContext *managedObjectContext;
 
-- (IBAction) showInfo:(id)sender;
+//- (IBAction) showInfo:(id)sender;
 - (IBAction) calculateRun;
 - (IBAction) clearAll;
 - (IBAction) textFieldDidUpdate:(id)sender;

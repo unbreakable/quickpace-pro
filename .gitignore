@@ -27,7 +27,6 @@ Icon
 ._*
 
 # JK additional ignores
-QuickpaceImages/
 Icon*
 
 # Stuff in the suggested .gitignore file from Facebook's iOS github page (less dups with above exclusions)

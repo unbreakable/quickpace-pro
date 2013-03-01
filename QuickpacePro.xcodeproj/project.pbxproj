@@ -13,7 +13,6 @@
 		8111EBBD16DDC75B00A3BC9B /* SettingsGearTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 8111EBBB16DDC75B00A3BC9B /* SettingsGearTab.png */; };
 		8111EBBE16DDC75B00A3BC9B /* SettingsGearTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8111EBBC16DDC75B00A3BC9B /* SettingsGearTab@2x.png */; };
 		815936EC1468D27100D74860 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 815936EB1468D27100D74860 /* Settings.bundle */; };
-		815BD116167557A0006CF7BE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 815BD115167557A0006CF7BE /* Default-568h@2x.png */; };
 		816B9685148AD4370021D539 /* Quickpace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8D1468B72A00BA965E /* Quickpace.xcdatamodeld */; };
 		816B9690148D64910021D539 /* RunDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816B968E148D64910021D539 /* RunDetailViewController.m */; };
 		816B9691148D64910021D539 /* RunDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 816B968E148D64910021D539 /* RunDetailViewController.m */; };
@@ -22,30 +21,15 @@
 		8172887C1675A36B0018C07C /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 817288791675A36B0018C07C /* iRate.bundle */; };
 		8172887D1675A36B0018C07C /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8172887B1675A36B0018C07C /* iRate.m */; };
 		817288801675A40E0018C07C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8172887F1675A40E0018C07C /* StoreKit.framework */; };
-		8172889A1675A78B0018C07C /* Calculator-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 817288961675A78B0018C07C /* Calculator-icon.png */; };
-		8172889B1675A78B0018C07C /* Calculator-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 817288971675A78B0018C07C /* Calculator-icon@2x.png */; };
-		8172889C1675A78B0018C07C /* qp-name.png in Resources */ = {isa = PBXBuildFile; fileRef = 817288981675A78B0018C07C /* qp-name.png */; };
-		8172889D1675A78B0018C07C /* qp-pro-main-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 817288991675A78B0018C07C /* qp-pro-main-bg.png */; };
-		817288A01675AAF20018C07C /* Treadmill-flip-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 8172889F1675AAF20018C07C /* Treadmill-flip-1136.png */; };
 		8188C41C1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
 		8188C41D1487E5B4008E6A30 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C41A1487E5B4008E6A30 /* HistoryViewController.m */; };
 		8188C41E1487E5B4008E6A30 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */; };
 		8188C41F1487E5B4008E6A30 /* HistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */; };
 		8188C44C14896D6E008E6A30 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C44B14896D6E008E6A30 /* Run.m */; };
 		8188C44D14896D6E008E6A30 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = 8188C44B14896D6E008E6A30 /* Run.m */; };
-		81AD811B1676B0B1007C8F4D /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81131676B0B0007C8F4D /* Icon-72.png */; };
-		81AD811C1676B0B1007C8F4D /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81141676B0B0007C8F4D /* Icon-72@2x.png */; };
-		81AD811D1676B0B1007C8F4D /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81151676B0B0007C8F4D /* Icon-Small-50.png */; };
-		81AD811E1676B0B1007C8F4D /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81161676B0B0007C8F4D /* Icon-Small-50@2x.png */; };
-		81AD811F1676B0B1007C8F4D /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81171676B0B0007C8F4D /* Icon-Small.png */; };
-		81AD81201676B0B1007C8F4D /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81181676B0B1007C8F4D /* Icon-Small@2x.png */; };
-		81AD81211676B0B1007C8F4D /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD81191676B0B1007C8F4D /* Icon.png */; };
-		81AD81221676B0B1007C8F4D /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81AD811A1676B0B1007C8F4D /* Icon@2x.png */; };
 		81AE4F6C166A941700069658 /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE4F6B166A941700069658 /* libFlurry.a */; };
 		81AE4F78166A9FD600069658 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81AE4F77166A9FD600069658 /* SystemConfiguration.framework */; };
 		81BB527F14943D9B0023BDF3 /* result-box-dark-inner-glow.png in Resources */ = {isa = PBXBuildFile; fileRef = 81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */; };
-		81D2795C146919C10024D13A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2795A146919C10024D13A /* Default.png */; };
-		81D2795D146919C10024D13A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D2795B146919C10024D13A /* Default@2x.png */; };
 		81D4DA7A1468B72A00BA965E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA791468B72A00BA965E /* UIKit.framework */; };
 		81D4DA7C1468B72A00BA965E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7B1468B72A00BA965E /* Foundation.framework */; };
 		81D4DA7E1468B72A00BA965E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D4DA7D1468B72A00BA965E /* CoreGraphics.framework */; };
@@ -65,8 +49,6 @@
 		81D4DAD51468BC9300BA965E /* FirstTimeSettingsMessage.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */; };
 		81D4DADE1468BC9300BA965E /* quickpace gold button down.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DACF1468BC9300BA965E /* quickpace gold button down.png */; };
 		81D4DADF1468BC9300BA965E /* quickpace gold button up.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAD01468BC9300BA965E /* quickpace gold button up.png */; };
-		81D4DAE01468BC9300BA965E /* SettingsGear.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAD11468BC9300BA965E /* SettingsGear.png */; };
-		81D4DAE11468BC9300BA965E /* SettingsGearGlowing.png in Resources */ = {isa = PBXBuildFile; fileRef = 81D4DAD21468BC9300BA965E /* SettingsGearGlowing.png */; };
 		81D4DAEA1468BFB800BA965E /* EffectsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE31468BFB800BA965E /* EffectsManager.m */; };
 		81D4DAEB1468BFB800BA965E /* RunStatsCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE51468BFB800BA965E /* RunStatsCalculator.m */; };
 		81D4DAEC1468BFB800BA965E /* SettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE71468BFB800BA965E /* SettingsManager.m */; };
@@ -77,6 +59,24 @@
 		81D4DAF11468BFD600BA965E /* UnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE91468BFB800BA965E /* UnitConverter.m */; };
 		81D4DAF21468BFD600BA965E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8B1468B72A00BA965E /* AppDelegate.m */; };
 		81D4DAF31468BFD600BA965E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA911468B72A00BA965E /* MainViewController.m */; };
+		81EA23A816E062F1009A34EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23A716E062F1009A34EE /* Default-568h@2x.png */; };
+		81EA23AB16E062FE009A34EE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23A916E062FE009A34EE /* Default.png */; };
+		81EA23AC16E062FE009A34EE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23AA16E062FE009A34EE /* Default@2x.png */; };
+		81EA23B516E06332009A34EE /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23AD16E06332009A34EE /* Icon-72.png */; };
+		81EA23B616E06332009A34EE /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23AE16E06332009A34EE /* Icon-72@2x.png */; };
+		81EA23B716E06332009A34EE /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23AF16E06332009A34EE /* Icon-Small-50.png */; };
+		81EA23B816E06332009A34EE /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23B016E06332009A34EE /* Icon-Small-50@2x.png */; };
+		81EA23B916E06332009A34EE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23B116E06332009A34EE /* Icon-Small.png */; };
+		81EA23BA16E06332009A34EE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23B216E06332009A34EE /* Icon-Small@2x.png */; };
+		81EA23BB16E06332009A34EE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23B316E06332009A34EE /* Icon.png */; };
+		81EA23BC16E06332009A34EE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23B416E06332009A34EE /* Icon@2x.png */; };
+		81EA23BF16E06362009A34EE /* Calculator-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23BD16E06362009A34EE /* Calculator-icon.png */; };
+		81EA23C016E06362009A34EE /* Calculator-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23BE16E06362009A34EE /* Calculator-icon@2x.png */; };
+		81EA23C316E06386009A34EE /* qp-name.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23C116E06385009A34EE /* qp-name.png */; };
+		81EA23C416E06386009A34EE /* qp-pro-main-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23C216E06386009A34EE /* qp-pro-main-bg.png */; };
+		81EA23C816E063A4009A34EE /* share-icon-glowing.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23C516E063A4009A34EE /* share-icon-glowing.png */; };
+		81EA23C916E063A4009A34EE /* share-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23C616E063A4009A34EE /* share-icon.png */; };
+		81EA23CA16E063A4009A34EE /* Treadmill-flip-1136.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23C716E063A4009A34EE /* Treadmill-flip-1136.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +97,6 @@
 		8111EBBC16DDC75B00A3BC9B /* SettingsGearTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SettingsGearTab@2x.png"; sourceTree = "<group>"; };
 		8115E45E16880EF10014E756 /* Quickpace 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Quickpace 2.xcdatamodel"; sourceTree = "<group>"; };
 		815936EB1468D27100D74860 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = SOURCE_ROOT; };
-		815BD115167557A0006CF7BE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../QuickpaceImages/Default-568h@2x.png"; sourceTree = "<group>"; };
 		816B968D148D64910021D539 /* RunDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailViewController.h; sourceTree = "<group>"; };
 		816B968E148D64910021D539 /* RunDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailViewController.m; sourceTree = "<group>"; };
 		816B968F148D64910021D539 /* RunDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RunDetailViewController.xib; sourceTree = "<group>"; };
@@ -105,30 +104,15 @@
 		8172887A1675A36B0018C07C /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
 		8172887B1675A36B0018C07C /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		8172887F1675A40E0018C07C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		817288961675A78B0018C07C /* Calculator-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Calculator-icon.png"; path = "QuickpaceImages/Calculator-icon.png"; sourceTree = SOURCE_ROOT; };
-		817288971675A78B0018C07C /* Calculator-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Calculator-icon@2x.png"; path = "QuickpaceImages/Calculator-icon@2x.png"; sourceTree = SOURCE_ROOT; };
-		817288981675A78B0018C07C /* qp-name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qp-name.png"; path = "QuickpaceImages/qp-name.png"; sourceTree = SOURCE_ROOT; };
-		817288991675A78B0018C07C /* qp-pro-main-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "qp-pro-main-bg.png"; path = "QuickpaceImages/qp-pro-main-bg.png"; sourceTree = SOURCE_ROOT; };
-		8172889F1675AAF20018C07C /* Treadmill-flip-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Treadmill-flip-1136.png"; path = "QuickpaceImages/Treadmill-flip-1136.png"; sourceTree = SOURCE_ROOT; };
 		8188C4191487E5B4008E6A30 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		8188C41A1487E5B4008E6A30 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		8188C41B1487E5B4008E6A30 /* HistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryViewController.xib; sourceTree = "<group>"; };
 		8188C44A14896D6E008E6A30 /* Run.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Run.h; sourceTree = "<group>"; };
 		8188C44B14896D6E008E6A30 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
-		81AD81131676B0B0007C8F4D /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "QuickpaceImages/Icon-72.png"; sourceTree = SOURCE_ROOT; };
-		81AD81141676B0B0007C8F4D /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "QuickpaceImages/Icon-72@2x.png"; sourceTree = SOURCE_ROOT; };
-		81AD81151676B0B0007C8F4D /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "QuickpaceImages/Icon-Small-50.png"; sourceTree = SOURCE_ROOT; };
-		81AD81161676B0B0007C8F4D /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "QuickpaceImages/Icon-Small-50@2x.png"; sourceTree = SOURCE_ROOT; };
-		81AD81171676B0B0007C8F4D /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "QuickpaceImages/Icon-Small.png"; sourceTree = SOURCE_ROOT; };
-		81AD81181676B0B1007C8F4D /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "QuickpaceImages/Icon-Small@2x.png"; sourceTree = SOURCE_ROOT; };
-		81AD81191676B0B1007C8F4D /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = QuickpaceImages/Icon.png; sourceTree = SOURCE_ROOT; };
-		81AD811A1676B0B1007C8F4D /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "QuickpaceImages/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
 		81AE4F6A166A941700069658 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		81AE4F6B166A941700069658 /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		81AE4F77166A9FD600069658 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "result-box-dark-inner-glow.png"; path = "../result-box-dark-inner-glow.png"; sourceTree = "<group>"; };
-		81D2795A146919C10024D13A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../QuickpaceImages/Default.png; sourceTree = "<group>"; };
-		81D2795B146919C10024D13A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../QuickpaceImages/Default@2x.png"; sourceTree = "<group>"; };
 		81D4DA751468B72A00BA965E /* QuickpacePro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickpacePro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D4DA791468B72A00BA965E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		81D4DA7B1468B72A00BA965E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,8 +137,6 @@
 		81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FirstTimeSettingsMessage.png; sourceTree = "<group>"; };
 		81D4DACF1468BC9300BA965E /* quickpace gold button down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace gold button down.png"; sourceTree = "<group>"; };
 		81D4DAD01468BC9300BA965E /* quickpace gold button up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quickpace gold button up.png"; sourceTree = "<group>"; };
-		81D4DAD11468BC9300BA965E /* SettingsGear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsGear.png; sourceTree = "<group>"; };
-		81D4DAD21468BC9300BA965E /* SettingsGearGlowing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsGearGlowing.png; sourceTree = "<group>"; };
 		81D4DAE21468BFB800BA965E /* EffectsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectsManager.h; sourceTree = "<group>"; };
 		81D4DAE31468BFB800BA965E /* EffectsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EffectsManager.m; sourceTree = "<group>"; };
 		81D4DAE41468BFB800BA965E /* RunStatsCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunStatsCalculator.h; sourceTree = "<group>"; };
@@ -163,6 +145,24 @@
 		81D4DAE71468BFB800BA965E /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		81D4DAE81468BFB800BA965E /* UnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitConverter.h; sourceTree = "<group>"; };
 		81D4DAE91468BFB800BA965E /* UnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitConverter.m; sourceTree = "<group>"; };
+		81EA23A716E062F1009A34EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		81EA23A916E062FE009A34EE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		81EA23AA16E062FE009A34EE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		81EA23AD16E06332009A34EE /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		81EA23AE16E06332009A34EE /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		81EA23AF16E06332009A34EE /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		81EA23B016E06332009A34EE /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		81EA23B116E06332009A34EE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		81EA23B216E06332009A34EE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		81EA23B316E06332009A34EE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		81EA23B416E06332009A34EE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		81EA23BD16E06362009A34EE /* Calculator-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calculator-icon.png"; sourceTree = "<group>"; };
+		81EA23BE16E06362009A34EE /* Calculator-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Calculator-icon@2x.png"; sourceTree = "<group>"; };
+		81EA23C116E06385009A34EE /* qp-name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qp-name.png"; sourceTree = "<group>"; };
+		81EA23C216E06386009A34EE /* qp-pro-main-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qp-pro-main-bg.png"; sourceTree = "<group>"; };
+		81EA23C516E063A4009A34EE /* share-icon-glowing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-icon-glowing.png"; sourceTree = "<group>"; };
+		81EA23C616E063A4009A34EE /* share-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-icon.png"; sourceTree = "<group>"; };
+		81EA23C716E063A4009A34EE /* Treadmill-flip-1136.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Treadmill-flip-1136.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,30 +326,30 @@
 		81D4DAC31468BC9300BA965E /* QuickpaceImages */ = {
 			isa = PBXGroup;
 			children = (
+				81EA23C116E06385009A34EE /* qp-name.png */,
+				81EA23C216E06386009A34EE /* qp-pro-main-bg.png */,
+				81EA23BD16E06362009A34EE /* Calculator-icon.png */,
+				81EA23BE16E06362009A34EE /* Calculator-icon@2x.png */,
+				81EA23C616E063A4009A34EE /* share-icon.png */,
+				81EA23C516E063A4009A34EE /* share-icon-glowing.png */,
+				81EA23C716E063A4009A34EE /* Treadmill-flip-1136.png */,
+				81EA23AD16E06332009A34EE /* Icon-72.png */,
+				81EA23AE16E06332009A34EE /* Icon-72@2x.png */,
+				81EA23AF16E06332009A34EE /* Icon-Small-50.png */,
+				81EA23B016E06332009A34EE /* Icon-Small-50@2x.png */,
+				81EA23B116E06332009A34EE /* Icon-Small.png */,
+				81EA23B216E06332009A34EE /* Icon-Small@2x.png */,
+				81EA23B316E06332009A34EE /* Icon.png */,
+				81EA23B416E06332009A34EE /* Icon@2x.png */,
+				81EA23A916E062FE009A34EE /* Default.png */,
+				81EA23AA16E062FE009A34EE /* Default@2x.png */,
+				81EA23A716E062F1009A34EE /* Default-568h@2x.png */,
+				81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */,
 				8111EBBB16DDC75B00A3BC9B /* SettingsGearTab.png */,
 				8111EBBC16DDC75B00A3BC9B /* SettingsGearTab@2x.png */,
-				81AD81131676B0B0007C8F4D /* Icon-72.png */,
-				81AD81141676B0B0007C8F4D /* Icon-72@2x.png */,
-				81AD81151676B0B0007C8F4D /* Icon-Small-50.png */,
-				81AD81161676B0B0007C8F4D /* Icon-Small-50@2x.png */,
-				81AD81171676B0B0007C8F4D /* Icon-Small.png */,
-				81AD81181676B0B1007C8F4D /* Icon-Small@2x.png */,
-				81AD81191676B0B1007C8F4D /* Icon.png */,
-				81AD811A1676B0B1007C8F4D /* Icon@2x.png */,
-				817288961675A78B0018C07C /* Calculator-icon.png */,
-				817288971675A78B0018C07C /* Calculator-icon@2x.png */,
-				817288981675A78B0018C07C /* qp-name.png */,
-				817288991675A78B0018C07C /* qp-pro-main-bg.png */,
-				81BB527E14943D9B0023BDF3 /* result-box-dark-inner-glow.png */,
-				8172889F1675AAF20018C07C /* Treadmill-flip-1136.png */,
-				81D2795A146919C10024D13A /* Default.png */,
-				81D2795B146919C10024D13A /* Default@2x.png */,
-				815BD115167557A0006CF7BE /* Default-568h@2x.png */,
 				81D4DAC61468BC9300BA965E /* FirstTimeSettingsMessage.png */,
 				81D4DACF1468BC9300BA965E /* quickpace gold button down.png */,
 				81D4DAD01468BC9300BA965E /* quickpace gold button up.png */,
-				81D4DAD11468BC9300BA965E /* SettingsGear.png */,
-				81D4DAD21468BC9300BA965E /* SettingsGearGlowing.png */,
 			);
 			name = QuickpaceImages;
 			path = Quickpace/QuickpaceImages;
@@ -430,32 +430,32 @@
 				81D4DAD51468BC9300BA965E /* FirstTimeSettingsMessage.png in Resources */,
 				81D4DADE1468BC9300BA965E /* quickpace gold button down.png in Resources */,
 				81D4DADF1468BC9300BA965E /* quickpace gold button up.png in Resources */,
-				81D4DAE01468BC9300BA965E /* SettingsGear.png in Resources */,
-				81D4DAE11468BC9300BA965E /* SettingsGearGlowing.png in Resources */,
 				815936EC1468D27100D74860 /* Settings.bundle in Resources */,
-				81D2795C146919C10024D13A /* Default.png in Resources */,
-				81D2795D146919C10024D13A /* Default@2x.png in Resources */,
 				8188C41E1487E5B4008E6A30 /* HistoryViewController.xib in Resources */,
 				816B9692148D64910021D539 /* RunDetailViewController.xib in Resources */,
 				81BB527F14943D9B0023BDF3 /* result-box-dark-inner-glow.png in Resources */,
-				815BD116167557A0006CF7BE /* Default-568h@2x.png in Resources */,
 				8172887C1675A36B0018C07C /* iRate.bundle in Resources */,
-				8172889A1675A78B0018C07C /* Calculator-icon.png in Resources */,
-				8172889B1675A78B0018C07C /* Calculator-icon@2x.png in Resources */,
-				8172889C1675A78B0018C07C /* qp-name.png in Resources */,
-				8172889D1675A78B0018C07C /* qp-pro-main-bg.png in Resources */,
-				817288A01675AAF20018C07C /* Treadmill-flip-1136.png in Resources */,
-				81AD811B1676B0B1007C8F4D /* Icon-72.png in Resources */,
-				81AD811C1676B0B1007C8F4D /* Icon-72@2x.png in Resources */,
-				81AD811D1676B0B1007C8F4D /* Icon-Small-50.png in Resources */,
-				81AD811E1676B0B1007C8F4D /* Icon-Small-50@2x.png in Resources */,
-				81AD811F1676B0B1007C8F4D /* Icon-Small.png in Resources */,
-				81AD81201676B0B1007C8F4D /* Icon-Small@2x.png in Resources */,
-				81AD81211676B0B1007C8F4D /* Icon.png in Resources */,
-				81AD81221676B0B1007C8F4D /* Icon@2x.png in Resources */,
 				8111EBB416DDB12D00A3BC9B /* SettingsViewController.xib in Resources */,
 				8111EBBD16DDC75B00A3BC9B /* SettingsGearTab.png in Resources */,
 				8111EBBE16DDC75B00A3BC9B /* SettingsGearTab@2x.png in Resources */,
+				81EA23A816E062F1009A34EE /* Default-568h@2x.png in Resources */,
+				81EA23AB16E062FE009A34EE /* Default.png in Resources */,
+				81EA23AC16E062FE009A34EE /* Default@2x.png in Resources */,
+				81EA23B516E06332009A34EE /* Icon-72.png in Resources */,
+				81EA23B616E06332009A34EE /* Icon-72@2x.png in Resources */,
+				81EA23B716E06332009A34EE /* Icon-Small-50.png in Resources */,
+				81EA23B816E06332009A34EE /* Icon-Small-50@2x.png in Resources */,
+				81EA23B916E06332009A34EE /* Icon-Small.png in Resources */,
+				81EA23BA16E06332009A34EE /* Icon-Small@2x.png in Resources */,
+				81EA23BB16E06332009A34EE /* Icon.png in Resources */,
+				81EA23BC16E06332009A34EE /* Icon@2x.png in Resources */,
+				81EA23BF16E06362009A34EE /* Calculator-icon.png in Resources */,
+				81EA23C016E06362009A34EE /* Calculator-icon@2x.png in Resources */,
+				81EA23C316E06386009A34EE /* qp-name.png in Resources */,
+				81EA23C416E06386009A34EE /* qp-pro-main-bg.png in Resources */,
+				81EA23C816E063A4009A34EE /* share-icon-glowing.png in Resources */,
+				81EA23C916E063A4009A34EE /* share-icon.png in Resources */,
+				81EA23CA16E063A4009A34EE /* Treadmill-flip-1136.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
