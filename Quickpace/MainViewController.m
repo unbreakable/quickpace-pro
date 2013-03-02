@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "RunStatsCalculator.h"
 #import "SettingsManager.h"
+#import "ShareText.h"
 #import "Flurry.h"
 #import "EffectsManager.h"
 #import "Run.h"
@@ -191,76 +192,11 @@
 }
 
 -(IBAction)openUIActivityView:(id)sender {
-    NSString *runTime, *distanceUnits, *inclinePhrase, *hoursBlurb, *minutesBlurb, *secondsBlurb;
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *textToShare;
     
-    // Get the units to append to the "I just ran X [miles/km]" phrase
-    SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
-    if ( [[userSettings getUnitsDefault] isEqualToString:@"metric"] ) {
-        distanceUnits = @"km";
-    } else {
-        if ( [distanceEntry.text floatValue] == 1 ) {
-            distanceUnits = @"mile";
-        } else {
-            distanceUnits = @"miles";
-        }
-    }
+    textToShare = [theShareText createShareTextUsingHours:hoursEntry.text andMinutes:minutesEntry.text andSeconds:secondsEntry.text andDistance:distanceEntry.text andIncline:inclineEntry.text];
     
-    // If incline is empty just end the sentence. Otherwise drop in the incline phrase.
-    if ( [inclineEntry.text isEqualToString: @""] ) {
-        inclinePhrase = [NSString stringWithFormat: @""];
-    } else {
-        inclinePhrase = [NSString stringWithFormat: @" at a %@%% incline", inclineEntry.text];
-    }
-    
-    if ( [hoursEntry.text isEqualToString: @""] || [hoursEntry.text isEqualToString: @"00"] ) {
-        hoursBlurb = @"";
-    } else {
-        hoursBlurb = [NSString stringWithFormat: @"%@:", hoursEntry.text];
-    }
-    
-    if ( [minutesEntry.text isEqualToString: @""] || [minutesEntry.text isEqualToString: @"00"] ) {
-        minutesBlurb = @"00";
-    } else if ( [minutesEntry.text floatValue] > 0 && [minutesEntry.text floatValue] < 10 ) {
-        minutesBlurb = [NSString stringWithFormat: @"0%@", minutesEntry.text];
-    } else {
-        minutesBlurb = minutesEntry.text;
-    }
-    
-    if ( [secondsEntry.text isEqualToString: @""] ) {
-        secondsBlurb = @"";
-    } else if ( [secondsEntry.text floatValue] > 0 && [secondsEntry.text floatValue] < 10 ) {
-        secondsBlurb = [NSString stringWithFormat: @":0%@", secondsEntry.text];
-    } else if ( [secondsEntry.text isEqualToString: @"00"] ) {
-        secondsBlurb = @":00";
-    } else {
-        secondsBlurb = [NSString stringWithFormat: @":%@", secondsEntry.text];
-    }
-    
-    // If only minutes are specified, make it more readable by saying "I ran x miles in y minutes..."
-    if ( ([hoursEntry.text isEqualToString: @""] || [hoursEntry.text isEqualToString: @"00"]) && ([secondsEntry.text isEqualToString: @""] || [secondsEntry.text isEqualToString: @"00"]) ){
-        if ( [minutesEntry.text floatValue] == 1 ) {
-            minutesBlurb = [NSString stringWithFormat: @"%@ minute", minutesEntry.text];
-        } else {
-            minutesBlurb = [NSString stringWithFormat: @"%@ minutes", minutesEntry.text];
-        }
-        hoursBlurb = @"";
-        secondsBlurb = @"";
-    }
-    
-    // If only hours are specified, make it more readable by saying "I ran x miles in y hours..."
-    if ( ([minutesEntry.text isEqualToString: @""] || [minutesEntry.text isEqualToString: @"00"]) && ([secondsEntry.text isEqualToString: @""] || [secondsEntry.text isEqualToString: @"00"]) ) {
-        if ( [hoursEntry.text floatValue] == 1 ) {
-            hoursBlurb = [NSString stringWithFormat: @"%@ hour", hoursEntry.text];
-        } else {
-            hoursBlurb = [NSString stringWithFormat: @"%@ hours", hoursEntry.text];
-        }
-        minutesBlurb = @"";
-        secondsBlurb = @"";
-    }
-    
-    runTime = [NSString stringWithFormat: @"%@%@%@", hoursBlurb, minutesBlurb, secondsBlurb];
-        
-    NSString *textToShare = [NSString stringWithFormat: @"I ran %@ %@ in %@%@. Quickpace Pro calculated my pace at %@ and I burned %@.", distanceEntry.text, distanceUnits, runTime, inclinePhrase, paceDisplayText.text, calorieDisplay.text];
     NSArray *activityItems = @[textToShare];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];

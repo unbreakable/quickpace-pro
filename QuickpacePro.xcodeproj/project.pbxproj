@@ -59,6 +59,8 @@
 		81D4DAF11468BFD600BA965E /* UnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DAE91468BFB800BA965E /* UnitConverter.m */; };
 		81D4DAF21468BFD600BA965E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA8B1468B72A00BA965E /* AppDelegate.m */; };
 		81D4DAF31468BFD600BA965E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D4DA911468B72A00BA965E /* MainViewController.m */; };
+		81D81C5716E1AD6600F76FBA /* ShareText.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D81C5616E1AD6600F76FBA /* ShareText.m */; };
+		81D81C5816E1AD6600F76FBA /* ShareText.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D81C5616E1AD6600F76FBA /* ShareText.m */; };
 		81EA23A816E062F1009A34EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23A716E062F1009A34EE /* Default-568h@2x.png */; };
 		81EA23AB16E062FE009A34EE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23A916E062FE009A34EE /* Default.png */; };
 		81EA23AC16E062FE009A34EE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 81EA23AA16E062FE009A34EE /* Default@2x.png */; };
@@ -145,6 +147,8 @@
 		81D4DAE71468BFB800BA965E /* SettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsManager.m; sourceTree = "<group>"; };
 		81D4DAE81468BFB800BA965E /* UnitConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitConverter.h; sourceTree = "<group>"; };
 		81D4DAE91468BFB800BA965E /* UnitConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitConverter.m; sourceTree = "<group>"; };
+		81D81C5516E1AD6600F76FBA /* ShareText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareText.h; sourceTree = "<group>"; };
+		81D81C5616E1AD6600F76FBA /* ShareText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareText.m; sourceTree = "<group>"; };
 		81EA23A716E062F1009A34EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		81EA23A916E062FE009A34EE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		81EA23AA16E062FE009A34EE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 				81D4DAE71468BFB800BA965E /* SettingsManager.m */,
 				81D4DAE81468BFB800BA965E /* UnitConverter.h */,
 				81D4DAE91468BFB800BA965E /* UnitConverter.m */,
+				81D81C5516E1AD6600F76FBA /* ShareText.h */,
+				81D81C5616E1AD6600F76FBA /* ShareText.m */,
 				81D4DA8A1468B72A00BA965E /* AppDelegate.h */,
 				81D4DA8B1468B72A00BA965E /* AppDelegate.m */,
 				81D4DA901468B72A00BA965E /* MainViewController.h */,
@@ -505,6 +511,7 @@
 				816B9690148D64910021D539 /* RunDetailViewController.m in Sources */,
 				8172887D1675A36B0018C07C /* iRate.m in Sources */,
 				8111EBB316DDB12D00A3BC9B /* SettingsViewController.m in Sources */,
+				81D81C5716E1AD6600F76FBA /* ShareText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +531,7 @@
 				8188C41D1487E5B4008E6A30 /* HistoryViewController.m in Sources */,
 				8188C44D14896D6E008E6A30 /* Run.m in Sources */,
 				816B9691148D64910021D539 /* RunDetailViewController.m in Sources */,
+				81D81C5816E1AD6600F76FBA /* ShareText.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
