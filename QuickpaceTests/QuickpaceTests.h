@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "FlipsideViewController.h"
+#import "SettingsViewController.h"
 #import "SettingsManager.h"
 #import "RunStatsCalculator.h"
 #import "UnitConverter.h"
@@ -23,7 +23,7 @@
  
     // Not sure if I need these yet
     MainViewController     *main_view_controller;
-    FlipsideViewController *flip_view_controller;
+    SettingsViewController *settings_view_controller;
     RunStatsCalculator     *run_calculator;
     UnitConverter          *unit_converter;
     UIView                 *pace_view;

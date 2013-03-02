@@ -377,25 +377,4 @@
 	}
 }
 
-#pragma mark - Flipside View
-/*
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller
-{
-    [self dismissModalViewControllerAnimated:YES];
-    
-    // Pulls any changes in the units and sets proper mile or kilometer labels
-    [self resetDisplayLabels];
-    
-    [Flurry logEvent:@"User visited settings view"];
-}
-
-- (IBAction)showInfo:(id)sender
-{    
-    FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideViewController" bundle:nil];
-    controller.delegate = self;
-    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentModalViewController:controller animated:YES];
-}
- */
-
 @end

@@ -77,7 +77,6 @@
     [self.tableView reloadData];
     
     [Flurry logEvent:@"User visited history summary view"];
-    NSLog(@"History detail loaded");
 }
 
 - (void)viewDidAppear:(BOOL)animated

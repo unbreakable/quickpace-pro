@@ -87,7 +87,6 @@
                                                object:self.view.window];
     
     [Flurry logEvent:@"User visited settings view"];
-    NSLog(@"Settings view loaded");
     
 	[super viewWillAppear:animated];
 }

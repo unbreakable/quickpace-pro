@@ -150,7 +150,6 @@
     [self.tableView reloadData];
     
     [Flurry logEvent:@"User visited history summary view"];
-    NSLog(@"History summary loaded");
     
     [super viewWillAppear:animated];
 }
