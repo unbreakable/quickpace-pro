@@ -242,6 +242,17 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    // If everything is blank, reset the screen to visually confirm if user changed between metric and imperial
+    if ([hoursEntry.text isEqualToString:@""] && [minutesEntry.text isEqualToString:@""] && [secondsEntry.text isEqualToString:@""] && [distanceEntry.text isEqualToString:@""] && [inclineEntry.text isEqualToString:@""]) {
+        [self resetDisplayLabels];
+    }
+    // Changes distance placeholder to confirm user action if they changed between metric and imperial in settings
+    SettingsManager *userSettings = [[SettingsManager alloc] initWithSettings];
+    if ([[userSettings getUnitsDefault] isEqualToString:@"metric"]) {
+        distanceEntry.placeholder = @"in km";
+    } else {
+        distanceEntry.placeholder = @"in miles";
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
