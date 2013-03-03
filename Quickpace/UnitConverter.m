@@ -80,4 +80,10 @@
     return results;
 }
 
+-(float) convertToMilesGivenKilometers: (NSString *) kilometersToConvert
+{
+    float result = [kilometersToConvert floatValue] * 0.621371192;
+    return result;
+}
+
 @end

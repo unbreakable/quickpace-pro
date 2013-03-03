@@ -34,6 +34,153 @@
     [userSettings saveWeightSetting:@"70"];
 }
 
+#pragma mark - Share Text methods
+-(void) testTimeHoursOnly
+{
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"2" andMinutes:@"" andSeconds:@"" andDistance:@"2" andIncline:@""];
+    
+    NSString *expected = @"I ran 2 miles in 2 hours. Quickpace Pro calculated my pace at 60:00 per mile and I burned 254.1 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeMinutesOnly {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"" andMinutes:@"20" andSeconds:@"" andDistance:@"2" andIncline:@"10.5"];
+    
+    NSString *expected = @"I ran 2 miles in 20 minutes at a 10.5% incline. Quickpace Pro calculated my pace at 10:00 per mile and I burned 358.7 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeHoursMinutes {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"1" andMinutes:@"10" andSeconds:@"" andDistance:@"1.25" andIncline:@""];
+    
+    NSString *expected = @"I ran 1.25 miles in 1:10. Quickpace Pro calculated my pace at 56:00 per mile and I burned 152.5 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeHoursSeconds {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"1" andMinutes:@"" andSeconds:@"30" andDistance:@"6" andIncline:@""];
+    
+    NSString *expected = @"I ran 6 miles in 1:00:30. Quickpace Pro calculated my pace at 10:05 per mile and I burned 746.2 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeMinutesSeconds {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"" andMinutes:@"35" andSeconds:@"45" andDistance:@"4" andIncline:@""];
+    
+    NSString *expected = @"I ran 4 miles in 35:45. Quickpace Pro calculated my pace at 8:56 per mile and I burned 483.1 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeZeroHours {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"00" andMinutes:@"18" andSeconds:@"20" andDistance:@"3" andIncline:@"0"];
+    
+    NSString *expected = @"I ran 3 miles in 18:20 at a 0% incline. Quickpace Pro calculated my pace at 6:07 per mile and I burned 329.9 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeZeroMinutes {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"2" andMinutes:@"00" andSeconds:@"38" andDistance:@"10" andIncline:@"1"];
+    
+    NSString *expected = @"I ran 10 miles in 2:00:38 at a 1% incline. Quickpace Pro calculated my pace at 12:04 per mile and I burned 1312.1 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeZeroSeconds {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"3" andMinutes:@"30" andSeconds:@"00" andDistance:@"26.2" andIncline:@""];
+    
+    NSString *expected = @"I ran 26.2 miles in 3:30:00. Quickpace Pro calculated my pace at 8:01 per mile and I burned 3032.9 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeSingleDigitMinutes {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"1" andMinutes:@"1" andSeconds:@"" andDistance:@"5" andIncline:@""];
+    
+    NSString *expected = @"I ran 5 miles in 1:01. Quickpace Pro calculated my pace at 12:12 per mile and I burned 626.2 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeSingleDigitSeconds {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"" andMinutes:@"10" andSeconds:@"1" andDistance:@"1" andIncline:@""];
+    
+    NSString *expected = @"I ran 1 mile in 10:01. Quickpace Pro calculated my pace at 10:01 per mile and I burned 124.3 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testTimeOneMinute {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    
+    result = [theShareText createShareTextUsingHours:@"" andMinutes:@"1" andSeconds:@"" andDistance:@"0.25" andIncline:@""];
+    
+    NSString *expected = @"I ran 0.25 miles in 1 minute. Quickpace Pro calculated my pace at 4:00 per mile and I burned 33.2 calories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
+-(void) testMetricShare {
+    ShareText *theShareText = [[ShareText alloc] init];
+    NSString *result;
+    
+    [self resetToDefaultSettings];
+    SettingsManager *userSettings = [[SettingsManager alloc] init];
+    [userSettings saveUnitsSetting:1];
+    
+    result = [theShareText createShareTextUsingHours:@"" andMinutes:@"30" andSeconds:@"" andDistance:@"5" andIncline:@""];
+    NSString *expected = @"I ran 5 km in 30 minutes. Quickpace Pro calculated my pace at 6:00 per km and I burned 382.6 kilocalories.";
+    STAssertEqualObjects (expected, result, @"Did not compute calories correctly, expecting %@, got %@", expected, result);
+}
+
 #pragma mark - Run Calculator methods
 -(void) testSpeed01
 {
@@ -194,7 +341,7 @@
     
     NSString *calResult = [runCalculator calculateCaloriesUsingHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance andIncline:@"0"];
     
-    NSString *expectedCal = @"1103.3 kilocalories";
+    NSString *expectedCal = @"765.2 kilocalories";
     STAssertEqualObjects (expectedCal, calResult, @"Did not compute calories correctly, expecting %@, got %@", expectedCal, calResult);
     
     NSString *paceResult = [runCalculator calculatePaceGivenHours:hours andMinutes:minutes andSeconds:seconds andDistance:distance];

@@ -14,10 +14,6 @@
     
 }
 
-// perhaps use RunStatsCalculator class instead of feeding RunTime from MainView
-// perhaps use SettingsManager class instead of feeding Units from MainView
-// perhaps use RunStatsCalculator class instead feeding Pace from MainView
-// perhaps use RunStatsCalculator class instead feeding Calories from MainView
 -(NSString *) createShareTextUsingHours: (NSString *) someHours
                              andMinutes: (NSString *) someMinutes
                              andSeconds: (NSString *) someSeconds

@@ -27,5 +27,6 @@
 -(NSString *) convertToPoundsGivenKgs: (NSString *) kilogramsToConvert;
 -(NSString *) convertToCentimetersGivenFeetInches: (NSDictionary *) feetInchesToConvert;
 -(NSDictionary *) convertToFeetInchesGivenCentimeters: (NSString *) centimetersToConvert;
+-(float) convertToMilesGivenKilometers: (NSString *) kilometersToConvert;
 
 @end

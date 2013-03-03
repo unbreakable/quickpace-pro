@@ -12,6 +12,7 @@
 #import "MainViewController.h"
 #import "SettingsViewController.h"
 #import "SettingsManager.h"
+#import "ShareText.h"
 #import "RunStatsCalculator.h"
 #import "UnitConverter.h"
 #import "EffectsManager.h"
@@ -50,9 +51,23 @@
 -(void) testCalories05;
 -(void) testMetricLabels01;
 
+// ShareText class tests
+-(void) testTimeHoursOnly;
+-(void) testTimeMinutesOnly;
+-(void) testTimeHoursMinutes;
+-(void) testTimeHoursSeconds;
+-(void) testTimeMinutesSeconds;
+-(void) testTimeZeroHours;
+-(void) testTimeZeroMinutes;
+-(void) testTimeZeroSeconds;
+-(void) testTimeSingleDigitMinutes;
+-(void) testTimeSingleDigitSeconds;
+-(void) testTimeOneMinute;
+-(void) testMetricShare;
+
 // MainView class tests
 
-// FlipView class tests
+// SettingsView class tests
 
 // Settings Manager class tests
 -(void) testUsageDefaultGetter;

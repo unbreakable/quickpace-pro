@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SettingsManager.h"
-
+#import "UnitConverter.h"
 
 @interface RunStatsCalculator : NSObject 
 {

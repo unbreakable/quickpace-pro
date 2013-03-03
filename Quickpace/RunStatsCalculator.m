@@ -168,10 +168,16 @@
     theHours =    [someHours    floatValue];
     theMinutes =  [someMinutes  floatValue];
     theSeconds =  [someSeconds  floatValue];
-    theDistance = [someDistance floatValue];
     theIncline = [someIncline floatValue];
     totalRunMinutes = (theHours * 60) + theMinutes + (theSeconds / 60);
-    theSpeed = theDistance / (totalRunMinutes / 60);  
+    if ([userSettings getUnitsDefault] == @"metric") {
+        // Convert from KM to MI before generating calories if necessary
+        UnitConverter *converter = [[UnitConverter alloc] init];
+        theDistance = [converter convertToMilesGivenKilometers:someDistance];
+    } else {
+        theDistance = [someDistance floatValue];
+    }
+    theSpeed = theDistance / (totalRunMinutes / 60);
     
     // Set variables to interpolate zero incline METS value using a set of line equations
     if (theSpeed <=0) 
