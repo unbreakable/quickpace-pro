@@ -61,8 +61,6 @@
     SettingsManager *userSettings = [[SettingsManager alloc] init];
     
     // Fire up Flurry (if user permits)
-    // PLEASE UNCOMMENT THIS BEFORE DEPLOYING AND REMOVE THIS LINE TOO
-    /*
     if ( [[userSettings getUsageDefault] isEqualToString:@"Yes"] )
     {
         [Flurry startSession:@"BHPZGM1XL1R9P7KAGXVY"];
@@ -73,7 +71,6 @@
         else
             [Flurry setGender:@"f"];
     }
-    */
     
     // Pull version number from Info plist and put in Settings so it is visible in the Settings.app
     [userSettings saveVersion:[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]];
