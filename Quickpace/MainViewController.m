@@ -194,10 +194,13 @@
 -(IBAction)openUIActivityView:(id)sender {
     ShareText *theShareText = [[ShareText alloc] init];
     NSString *textToShare;
+    UIImage *imageToShare;
     
     textToShare = [theShareText createShareTextUsingHours:hoursEntry.text andMinutes:minutesEntry.text andSeconds:secondsEntry.text andDistance:distanceEntry.text andIncline:inclineEntry.text];
     
-    NSArray *activityItems = @[textToShare];
+    imageToShare = [UIImage imageNamed:@"Icon-Small.png"];
+    
+    NSArray *activityItems = @[textToShare, imageToShare];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
     // This is an array of excluded activities that should not appear on the UIActivityView
