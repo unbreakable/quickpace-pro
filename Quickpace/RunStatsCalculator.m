@@ -170,7 +170,7 @@
     theSeconds =  [someSeconds  floatValue];
     theIncline = [someIncline floatValue];
     totalRunMinutes = (theHours * 60) + theMinutes + (theSeconds / 60);
-    if ([userSettings getUnitsDefault] == @"metric") {
+    if ([[userSettings getUnitsDefault] isEqual: @"metric"]) {
         // Convert from KM to MI before generating calories if necessary
         UnitConverter *converter = [[UnitConverter alloc] init];
         theDistance = [converter convertToMilesGivenKilometers:someDistance];
